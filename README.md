@@ -2,7 +2,7 @@
 
 > Salient events are an attentional mechanism by which organisms learn and survive; those organisms can focus their limited perceptual and cognitive resources on the pertinent (that is, salient) subset of the sensory data available to them.
 
-I started building Salience out of frustration. I realised I've been navigating the same sites, doing the same things, over and over again, in search of a salient piece of information. 
+I started building Salience out of frustration. I realised I've been navigating the same sites, doing the same things, over and over again, in search of a salient piece of information.
 
 Why doesn't my tooling understand my intent?
 
@@ -18,11 +18,32 @@ All of the above could live in a single place, behind a single button, a button 
 
 As a developer - everything starts from a git branch. A ticket links to it. You create a PR from it. CI/CD runs on it. It gets deployed into the cloud. Observability metrics flow from it.
 
-Salience is a desktop app for developers. It follows the branch wherever it goes - ticket, PR, CI, stack, deploy, metrics - pulling everything into one view. It shows you what you need, when you need it.
+Salience is a desktop app for developers. It follows the branch wherever it goes - ticket, PR, CI, stack, deploy, metrics - pulling everything into one view.
 
-One button. Only when the build is passing.
+## No inbox, no notifications, no modals
 
-And because Salience already knows what's salient, your AI agent does too. Point Claude, Codex, Cursor or any MCP-aware tool at Salience and it gets the same correlated context as you. 
+Salience doesn't do notifications.
+
+A failed build isn't a line in your inbox - it's a state and state carries context. Your project has a failing build, that's true until it's fixed. A PR review request isn't a one-time notification. If you've left your feedback and nothing has changed since, it's not your concern anymore. A review request on work that unblocks 3 other tickets in the sprint is louder than one that doesn't.
+
+Salience uses this context so you don't have to remember what's important. The most important thing is the first thing you see. When it stops mattering, it stops being there.
+
+## Intent aware shortcuts
+
+When you change a test file. "Run this test" shows up in the command palette and on the build page. You push without a PR. "Open a PR for this branch" shows up. One of your Docker containers logs an error. "Show the stack trace" shows up. 
+Pull down a change that added new dependencies. "npm install".
+
+Add a `salience.toml` to your repo and your team's commands show up in the palette alongside the built-in ones.
+
+The more you connect, the more useful it becomes. What might typically take several page navigations in a browser become shortcuts like any other. Streaming CloudWatch logs, generating an SSM exec command or opening the Sentry issue this branch created.
+
+## Sensible defaults now, customisation later
+
+The defaults work out of the box - stalled PRs, ticket drift, failed CI. 
+
+A Kanban board where the PR and CI are first class citizens, not hidden away in a sub-menu. A view of your work in order of importance and what it means to you right now.
+
+And because Salience already knows what's salient, your AI agent does too. Point Claude, Codex, Cursor or any MCP-aware tool at Salience and it gets the same correlated context as you.
 The branch you're on, the ticket it links to, the tests that are failing and the deploy that just rolled out. Stop copying and pasting context and start asking "what's my stand-up today?"
 
 <img width="1920" height="1046" alt="Screenshot 2026-05-12 at 21 54 53" src="https://github.com/user-attachments/assets/ab9838d4-d6bd-4361-a8b7-bfb7055d1ad6" />
