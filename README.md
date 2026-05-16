@@ -46,6 +46,3 @@ A Kanban board where the PR and CI are first class citizens, not hidden away in 
 And because Salience already knows what's salient, your AI agent does too. Point Claude, Codex, Cursor or any MCP-aware tool at Salience and it gets the same correlated context as you.
 The branch you're on, the ticket it links to, the tests that are failing and the deploy that just rolled out. Stop copying and pasting context and start asking "what's my stand-up today?"
 
-<img width="1920" height="1046" alt="Screenshot 2026-05-12 at 21 54 53" src="https://github.com/user-attachments/assets/ab9838d4-d6bd-4361-a8b7-bfb7055d1ad6" />
-
-<img width="1916" height="1024" alt="Screenshot 2026-05-12 at 21 56 27" src="https://github.com/user-attachments/assets/167184a6-855c-42c1-907e-68c033971730" />
