@@ -1,7 +1,5 @@
 # Salience
 
-> Salient events are an attentional mechanism by which organisms learn and survive; those organisms can focus their limited perceptual and cognitive resources on the pertinent (that is, salient) subset of the sensory data available to them.
-
 I started building Salience out of frustration. I realised I've been navigating the same sites, doing the same things, over and over again, in search of a salient piece of information.
 
 Why doesn't my tooling understand my intent?
@@ -22,8 +20,6 @@ Salience is a desktop app for developers. It follows the branch wherever it goes
 
 ## No inbox, no notifications, no modals
 
-Salience doesn't do notifications.
-
 A failed build isn't a line in your inbox - it's a state and state carries context. Your project has a failing build, that's true until it's fixed. A PR review request isn't a one-time notification. If you've left your feedback and nothing has changed since, it's not your concern anymore. A review request on work that unblocks 3 other tickets in the sprint is louder than one that doesn't.
 
 Salience uses this context so you don't have to remember what's important. The most important thing is the first thing you see. When it stops mattering, it stops being there.
@@ -37,12 +33,8 @@ Add a `salience.toml` to your repo and your team's commands show up in the palet
 
 The more you connect, the more useful it becomes. What might typically take several page navigations in a browser become shortcuts like any other. Streaming CloudWatch logs, generating an SSM exec command or opening the Sentry issue this branch created.
 
-## Sensible defaults now, customisation later
+## AI
 
-The defaults work out of the box - stalled PRs, ticket drift, failed CI. 
-
-A Kanban board where the PR and CI are first class citizens, not hidden away in a sub-menu. A view of your work in order of importance and what it means to you right now.
-
-And because Salience already knows what's salient, your AI agent does too. Point Claude, Codex, Cursor or any MCP-aware tool at Salience and it gets the same correlated context as you.
+Because Salience already knows what's salient, your AI agent does too. Point Claude, Codex, Cursor or any MCP-aware tool at Salience and it gets the same correlated context as you.
 The branch you're on, the ticket it links to, the tests that are failing and the deploy that just rolled out. Stop copying and pasting context and start asking "what's my stand-up today?"
 
