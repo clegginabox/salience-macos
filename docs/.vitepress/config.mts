@@ -7,6 +7,7 @@ export default defineConfig({
   cleanUrls: true,
   appearance: 'dark',
   lastUpdated: false,
+  ignoreDeadLinks: true,
 
   head: [
     ['link', { rel: 'icon', type: 'image/x-icon', href: '/salience-macos/favicon.ico' }],
