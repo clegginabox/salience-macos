@@ -14,7 +14,7 @@ Open **Connections** in the sidebar and pick one tool to start with. GitHub is t
 
 1. Generate a personal access token at [github.com/settings/tokens](https://github.com/settings/tokens) — `repo` scope is enough for a private repo, no scope is needed for a public one.
 2. Paste it into the GitHub field in Salience.
-3. Approve with Touch ID.
+3. Save.
 
 Within a minute, open pull requests for your project show up as `vcs.pull_request` entities.
 
