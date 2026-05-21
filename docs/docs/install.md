@@ -20,7 +20,7 @@ The download is a `.dmg`. Open it, drag Salience to your Applications folder, an
 
 The first time you launch Salience, macOS will ask whether you trust the developer. Click **Open**.
 
-Salience stores connector credentials — GitHub tokens, Jira tokens, and other secrets — in a local SQLite database at `~/Library/Application Support/Salience/`. The app itself does not collect or transmit those credentials. (Future releases will gate credential operations behind a biometric (Touch ID) prompt.)
+Salience stores connector credentials — GitHub tokens, Jira tokens, and other secrets — in an encrypted local SQLite database at `~/Library/Application Support/Salience/`. The app itself does not collect or transmit those credentials. (Future releases will gate credential operations behind a biometric (Touch ID) prompt.)
 
 ## Next steps
 
