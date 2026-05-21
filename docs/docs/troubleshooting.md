@@ -40,8 +40,8 @@ That's a bug — please [open an issue](https://github.com/clegginabox/salience-
 To start clean (this deletes all credentials, projects, and preferences):
 
 ```bash
-rm -rf ~/Library/Application\ Support/Salience
-rm ~/.salience/preferences.json
+rm -rf "$HOME/Library/Application Support/Salience"
+rm "$HOME/.salience/preferences.json"
 ```
 
 Then relaunch Salience. You'll need to re-add projects and re-paste tokens.
