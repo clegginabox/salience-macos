@@ -1,0 +1,12 @@
+# Node
+node_modules/
+
+# VitePress build output + cache
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+
+# OS / editor cruft
+.DS_Store
+.idea/
+.vscode/
+*.log
