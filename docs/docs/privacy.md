@@ -14,7 +14,7 @@ There is no Salience server. There is no cloud sync. There is no analytics pipel
 
 ## Network monitor
 
-Salience makes outbound HTTP calls to the tools you've connected (GitHub, Bitbucket, Jira, Sentry if crash reporting is on). To audit them with your own eyes, open **Network Inspector** in the sidebar. Every request the app makes is listed there: destination, method, response status, timing.
+Salience makes outbound HTTP calls to the tools you've connected (GitHub, Bitbucket, Jira) plus Sentry while crash reporting is enabled. To audit them with your own eyes, open **Network Inspector** in the sidebar. Every request the app makes is listed there: destination, method, response status, timing.
 
 If the network monitor shows a host you don't recognise, that's a bug — please [open an issue](https://github.com/clegginabox/salience-macos/issues).
 
@@ -35,7 +35,9 @@ Salience ships with Sentry crash reporting **enabled by default** in the current
 | **Performance traces** | On | A 10% sample of operation timings. |
 | **Breadcrumbs** | On | Trail of recent log lines accompanying an error. |
 
-Every Sentry request shows up in **Network Inspector** as a call to `*.ingest.sentry.io`. You can verify the master switch works by toggling it off and watching those calls stop in real time.
+Sentry errors, traces, and breadcrumbs show up in **Network Inspector** as calls to `*.ingest.sentry.io`. You can verify the master switch works by toggling it off and watching those calls stop in real time.
+
+One exception: **minidumps** (the binary dumps captured after a hard crash) are uploaded by a separate crash-reporter process and do not appear in the Network Inspector. They are only ever sent after the app has crashed, never during normal operation, and the master switch still gates them — toggling Sentry off prevents the crash reporter from starting at all.
 
 The Sentry DSN is hard-coded in the binary; we use Sentry's official Rust SDK with no proxying. No third-party trackers, analytics SDKs, or fingerprinting libraries are bundled.
 
