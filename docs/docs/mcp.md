@@ -89,7 +89,7 @@ Cursor's MCP support is evolving. Check [cursor.com/docs](https://cursor.com/doc
 These tools are available when a connected project has a PHP code graph indexed.
 
 - **`find_callers`** — find functions and methods that call a given fully-qualified PHP name (e.g. `App\\Service\\UserService::save`).
-- **`find_implementations`** — find implementations of a PHP interface or abstract method.
+- **`find_implementations`** — find every PHP class that implements a given interface.
 - **`type_of`** — resolve a PHP fully-qualified name to its kind and metadata.
 - **`references_in_file`** — find references to a name within a single PHP file.
 
