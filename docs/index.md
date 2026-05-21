@@ -6,7 +6,7 @@ hero:
   text: Home Assistant for developer tools.
   tagline: One view of your branch, ticket, PR, CI, deploy, and logs — calm by default, never a notification.
   image:
-    src: /screenshots/my-work.png
+    src: /screenshots/my-work-kanban.png
     alt: Salience showing the My Work kanban view
   actions:
     - theme: brand
@@ -35,7 +35,21 @@ A failed build isn't a line in your inbox; it's a state, and state carries conte
 
 ## See it work
 
-<!-- Screenshot gallery will be populated in Task 5 -->
+**Suggested — the right action shows up where you already are**
+
+![Suggested actions for the current branch](/screenshots/checks-tests.png)
+
+**Command palette — every action, every entity, one keystroke away**
+
+![Command palette over the console view](/screenshots/command-palette.png)
+
+**Console — your build output, your terminal, your stack traces, together**
+
+![Build and log output in the console](/screenshots/console.png)
+
+**Stand-up — your week, organised by what needs you, not by ticket ID**
+
+![Stand-up grouped by status: changes requested, stuck in review, CI failing](/screenshots/my-work-list.png)
 
 ## How it fits together
 
