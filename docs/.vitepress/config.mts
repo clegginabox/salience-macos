@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress';
 
 export default defineConfig({
   title: 'Salience',
-  description: 'Home Assistant for developer tools.',
+  description: 'Your work, as a living map. A calm, local-first view of branches, PRs, tickets, CI and agents.',
   base: '/salience-macos/',
   cleanUrls: true,
   appearance: 'dark',
@@ -13,7 +13,7 @@ export default defineConfig({
     ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/salience-macos/favicon-16.png' }],
     ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/salience-macos/apple-touch-icon.png' }],
     ['meta', { property: 'og:title', content: 'Salience' }],
-    ['meta', { property: 'og:description', content: 'Home Assistant for developer tools.' }],
+    ['meta', { property: 'og:description', content: 'Your work, as a living map. A calm, local-first view of branches, PRs, tickets, CI and agents.' }],
     ['meta', { property: 'og:image', content: 'https://clegginabox.github.io/salience-macos/og.png' }],
     ['meta', { property: 'og:url', content: 'https://clegginabox.github.io/salience-macos/' }],
     ['meta', { property: 'og:type', content: 'website' }],
