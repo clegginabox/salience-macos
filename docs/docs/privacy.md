@@ -6,7 +6,7 @@ Salience runs on your machine. Your data stays on your machine. This page is an 
 
 ## Where your data lives
 
-- **Credentials** (GitHub tokens, Jira tokens, etc.) — encrypted SQLite at `~/Library/Application Support/Salience/`, using SQLCipher with a key stored in the macOS Keychain. Salience never transmits these.
+- **Credentials** (GitHub tokens, Jira tokens, etc.) — encrypted SQLite at `~/Library/Application Support/clegginabox.salience/`, using SQLCipher with a key stored in the macOS Keychain. Salience never transmits these.
 - **Entities** (branches, PRs, tickets, build status) — fetched from the tools you've connected and held in a local store at the same path. Salience never sends entity data off the machine.
 - **Preferences** — plain JSON at `~/.salience/preferences.json` (see [Configuration](/docs/configuration)).
 

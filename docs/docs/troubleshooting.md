@@ -40,7 +40,7 @@ That's a bug — please [open an issue](https://github.com/clegginabox/salience-
 To start clean (this deletes all credentials, projects, and preferences):
 
 ```bash
-rm -rf "$HOME/Library/Application Support/Salience"
+rm -rf "$HOME/Library/Application Support/clegginabox.salience"
 rm "$HOME/.salience/preferences.json"
 ```
 

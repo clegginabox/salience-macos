@@ -27,14 +27,20 @@ With the header:
 Authorization: Bearer <token>
 ```
 
-Both values are read from disk:
+Once the server is running, **Settings → MCP** shows both values directly — the HTTP URL and the Bearer token, ready to copy. That's the easiest place to get them.
+
+They're also on disk:
 
 | File | Contents |
 |------|----------|
-| `~/Library/Application Support/Salience/mcp/port` | The port number, one line. World-readable. |
-| `~/Library/Application Support/Salience/mcp/token` | The 32-character Bearer token, one line. `0o600` permissions. |
+| `~/Library/Application Support/clegginabox.salience/mcp/port` | The port number, one line. World-readable. Written on start, removed when you disable the server. |
+| `~/Library/Application Support/clegginabox.salience/mcp/token` | The 32-character Bearer token, one line. `0o600` permissions. Survives disable and restart. |
 
-The server only accepts loopback `Host` headers, so it can't be reached from another machine on your network even if you forward the port.
+The server only accepts loopback `Host` headers, so it can't be reached from another machine on your network even if you forward the port. Token comparison is constant-time, and request bodies are capped at 16 MiB.
+
+### Rotating the token
+
+**Settings → MCP** has a **Rotate token** button, available while the server is running. It mints a fresh token, writes it to disk, and swaps it into the live server immediately — any client still holding the old token starts getting `401`s, so you'll need to reconfigure them. Use it if you think the token has leaked.
 
 ### Generic HTTP MCP client
 
@@ -64,7 +70,9 @@ Claude Desktop's MCP support is primarily stdio. For HTTP MCP servers, the most 
 }
 ```
 
-Replace `<port>` and `<token>` with the values from `~/Library/Application Support/Salience/mcp/{port,token}`. Restart Claude Desktop after editing the config.
+Replace `<port>` and `<token>` with the values from **Settings → MCP**. Restart Claude Desktop after editing the config.
+
+Note that the port is re-allocated every time the server starts, so it changes across app restarts. The token doesn't.
 
 ### Cursor
 
@@ -72,26 +80,50 @@ Cursor's MCP support is evolving. Check [cursor.com/docs](https://cursor.com/doc
 
 ## Tools available today
 
-### Entity store
+Every tool is read-only. Tools that take a `project` resolve it by name (case-insensitive) or by exact id; an unknown or ambiguous name comes back with the candidate projects so your agent can retry.
 
-- **`list_entity_types`** — list all entity types in the store (e.g. `git.branch`, `vcs.pull_request`, `ticket`, `docker.container`, `situation`).
-- **`list_entities`** — list entities of a specific type, with an optional `project_id` filter.
-- **`get_entity`** — fetch a single entity by type + ID.
-- **`get_snapshot`** — full snapshot across all entity types. Can be large — prefer `list_entities` with a type filter when you can.
+### Entities and correlations
 
-### Correlations
+| Tool | What it does |
+|------|--------------|
+| `list_entity_types` | The orientation call. With no argument, lists every entity type present with its count. Pass a `type_name` to also get that one type's full JSON schema. |
+| `list_entities` | All entities of one type (`git.branch`, `vcs.pull_request`, `ticket`, …), optionally filtered by `project_id`. Id-sorted, `limit` defaults to 50 and caps at 500. There's no offset paging — a `truncated: true` result means narrow the query. |
+| `get_entity` | One entity's full JSON by type name + id. Ids are usually `<project_id>:<local>`; a few, like Jira ticket keys, are global. |
+| `get_correlations_for_entity` | The raw correlation edges touching an entity, both directions. Edges only, no neighbour data. |
+| `describe_entity` | The entity plus its 1-hop neighbours, grouped by correlation kind and direction, with each neighbour's data inlined. The best answer to "what is this connected to?" |
+| `my_work` | Curated current work for a project: your own meaningful work plus reviews you owe, scratch branches and backlog noise removed, cross-repo siblings collapsed, ordered by urgency. Also returns a backlog count and the project's loud situations. `project` is optional — omit for all projects. |
+| `recent_activity` | A project's recorded event timeline, newest first — branches created and advanced, PRs opened and closed, tickets moved, CI completed, deploys. `since` (RFC3339 UTC) filters by arrival time; `limit` defaults to 50, caps at 200. |
 
-- **`get_correlations_for_entity`** — raw correlation edges touching an entity (bidirectional). Returns edges only.
-- **`describe_entity`** — entity plus its 1-hop neighbours, grouped by correlation kind and direction. The best starting point for "what is this connected to?" questions — it dereferences neighbour data inline.
+`my_work` and `recent_activity` pair up: one is current state, the other is the log. Together they're enough to write a stand-up without inventing anything.
 
-### PHP code graph
+### Code graph (PHP only)
 
-These tools are available when a connected project has a PHP code graph indexed.
+These read the code graph described in [Code Graph](/docs/code-graph). **PHP is the only language indexed today**, and each tool needs the target project to have been ingested — otherwise you'll get a clean "not in the graph" error rather than a silent empty result.
 
-- **`find_callers`** — find functions and methods that call a given fully-qualified PHP name (e.g. `App\\Service\\UserService::save`).
-- **`find_implementations`** — find every PHP class that implements a given interface.
-- **`type_of`** — resolve a PHP fully-qualified name to its kind and metadata.
-- **`references_in_file`** — find references to a name within a single PHP file.
+All of them return locations and signatures — file, line, stable id, kind, fqn, modifiers — and never source text. Paths are repo-root-relative; your agent reads the file itself. Symbol resolution is **case-sensitive**.
+
+| Tool | What it does |
+|------|--------------|
+| `find_definition` | Resolve a symbol to its definition site(s). Accepts a fully-qualified name (`App\Service\UserService::save`), a bare `Class::member`, or a bare name. Returns every match. |
+| `get_symbol` | One symbol's metadata by the stable id any other tool returned. |
+| `get_file_outline` | The symbols a file defines — classes, interfaces, traits, enums, functions, methods — in source order. A file's shape without reading it. |
+| `find_implementations` | Every type that implements or extends a given interface or class, **transitively**. The downward hierarchy query grep can't do. |
+| `find_supertypes` | The upward mirror: a type's full ancestor chain — parent classes, interfaces, traits — transitively. Each hit says which relation reached it and whether it resolved inside your source or stopped at a vendor boundary. |
+| `find_references` | Every symbol that references a given one, grouped by *how*. Optional `kinds` filter. |
+| `find_callees` | The forward mirror: every symbol a given symbol references. Same `kinds` taxonomy. |
+| `describe_symbol` | One-shot orientation — definition sites plus both directions of neighbours, grouped by edge kind. Saves the find_definition → find_references → find_callees dance. |
+
+The edge kinds `find_references` and `find_callees` group by, and accept in `kinds`:
+
+| Kind | Meaning |
+|------|---------|
+| `calls` | A method or function that calls this. Doubles as find-callers. For a class, this is who instantiates it — `new X()` records a `calls` edge on class `X` whether or not `X` declares a constructor. |
+| `typehints` | The symbol appears as a type in a signature. |
+| `type_ref` | The maximal coupling surface — high volume and deliberately imprecise. Includes every case where a body touches *any* member of the class. Useful for "what's coupled to this at all", noisy for anything else. |
+| `implements` / `extends` / `uses` | The direct one-hop declaration, as opposed to the transitive `find_implementations` / `find_supertypes`. |
+| `overrides` | A method that overrides or implements this method. |
+
+Results lead with the precise kinds and trail with `type_ref`, so the result cap never buries the signal, and a `by_kind` map carries true per-kind totals even when the list is truncated.
 
 The tool surface evolves as Salience grows; check the in-app **Settings → MCP** page for the currently registered list.
 

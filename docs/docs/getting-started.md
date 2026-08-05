@@ -20,12 +20,15 @@ Within a minute, open pull requests for your project show up as `vcs.pull_reques
 
 ## 3. Look at the result
 
-Switch to **My Work** in the sidebar. You should see a kanban-style view that joins your branches, PRs, and (if a token-bearing CI is configured) build statuses. This view _is_ the entity store, rendered.
+Open **Map** in the sidebar, under Dev Tools. The branch you're on renders as a canvas of the files you've changed; zoom out and you're at network altitude, where your branches, worktrees and remotes sit as islands. ⌘K → **My branches island** takes you straight there.
+
+When you want the same work as a list, **My Work** joins your branches, PRs, and (if a token-bearing CI is configured) build statuses into a kanban view. Both surfaces _are_ the entity store, rendered.
 
 If anything looks empty, give it 30 seconds — the GitHub sync runs every 5 minutes, but the first one fires immediately on token save.
 
 ## Next
 
+- **[The Map →](/docs/map)** — the spatial view your work lives on
 - **[Connect your tools →](/docs/connect-your-tools)** — full list of supported integrations
 - **[MCP server →](/docs/mcp)** — expose this same context to your AI agent
 - **[Privacy & security →](/docs/privacy)** — where your data lives
