@@ -3,11 +3,13 @@ layout: home
 
 hero:
   name: Salience
-  text: Home Assistant for developer tools.
-  tagline: One view of your branch, ticket, PR, CI, deploy, and logs — calm by default, never a notification.
-  image:
-    src: /screenshots/my-work-kanban.png
-    alt: Salience showing the My Work kanban view
+  text: Your work, as a living map.
+  tagline: Branches, PRs, tickets, CI, deploys — and the agents working on them — joined into one calm map on your second monitor. Local, private, yours.
+  # HERO IMAGE SLOT — map screenshot: mid-zoom, populated, agent presence + one glowing situation.
+  # Uncomment when captured:
+  # image:
+  #   src: /screenshots/map-hero.png
+  #   alt: The Salience map showing branches, PRs, tickets and CI joined as islands
   actions:
     - theme: brand
       text: Download for macOS
@@ -17,23 +19,45 @@ hero:
       link: /docs/
 
 features:
+  - title: A living map, not a dashboard
+    details: Your branches, PRs, tickets and CI laid out as places, not rows. Positions stay stable, so you always know where to look — and you can watch your AI agents move as they work.
   - title: Calm by default
-    details: No inbox, no notifications, no modals. State carries the context — when something stops mattering, it stops being there.
-  - title: Intent-aware shortcuts
-    details: Change a test file and "run this test" appears. Pull new dependencies and "npm install" shows up. The right action surfaces where you already are.
-  - title: Cross-source insights
-    details: Branch → ticket → PR → CI → deploy → logs in one view. Your AI agent gets the same correlated context, so stop copying and pasting.
+    details: No inbox, no notifications, no modals. Salience promotes what matters into situations, each with a loudness that matches how urgently it needs you.
+  - title: Readable by your agents
+    details: The same joined graph the map renders ships with an MCP server. Point your agent at it and ask — "What's my stand-up?", "What shipped in the last deploy?" — no more scraping five tabs.
+  - title: Verifiably local
+    details: An encrypted database on your machine, credentials in the OS keychain, and a built-in network monitor showing every outbound request Salience makes. You're the customer, not the product.
 ---
 
-## What is Salience
+## Why Salience
 
-Salience is a desktop app for developers. It follows the branch wherever it goes — ticket, PR, CI, deploy, metrics — pulling everything into one ambient view that lives on your second monitor.
+On a recent contract I worked as a one-man scrum team, drowning in tabs and
+windows: IDEs, terminals, Teams, Jira, Bitbucket, TeamCity, Docker, AWS,
+Sentry. Some tabs existed to repeat the same actions — run the tests, SSH into
+an instance, run a migration. The rest existed to answer questions whose
+answers lived across several tools at once: *Is my ticket in sync with my
+work? What's actually deployed right now?*
 
-It's built around an idea: salient events are an attentional mechanism by which organisms learn and survive. Your tooling should help you focus on the pertinent subset of what's available — not surface every notification it can.
+Home Assistant showed me the fix. My car knows its fuel level, my calendar
+knows my next meeting, my house has smart lights — three silos. Home Assistant
+joins them: if the morning's meeting is further away than the remaining fuel
+will take me, the lights turn red. Information that already exists, brought to
+me instead of me going to find it — with enough time to act.
 
-A failed build isn't a line in your inbox; it's a state, and state carries context. A PR review request on work that unblocks three other tickets in the sprint is louder than one that doesn't. Salience uses that context so you don't have to remember what's important.
+Salience does that for developer tools. It doesn't replace any of them — it
+replaces the tabs, and the questions with **answers**. A red light at just the
+right time.
+
+[The full story →](/docs/about)
 
 ## See it work
+
+<!-- GALLERY SLOT: zoomed-out map / world view -->
+<!-- GALLERY SLOT: mid-zoom island showing branch + PR + ticket + CI joined -->
+
+**Stand-up — your week, organised by what needs you, not by ticket ID**
+
+![Stand-up grouped by status: changes requested, stuck in review, CI failing](/screenshots/my-work-list.png)
 
 **Suggested — the right action shows up where you already are**
 
@@ -47,14 +71,29 @@ A failed build isn't a line in your inbox; it's a state, and state carries conte
 
 ![Build and log output in the console](/screenshots/console.png)
 
-**Stand-up — your week, organised by what needs you, not by ticket ID**
+## How it works
 
-![Stand-up grouped by status: changes requested, stuck in review, CI failing](/screenshots/my-work-list.png)
+Salience connects to your tools (git, GitHub, Bitbucket, Jira, Docker, AWS)
+and turns what it finds into **entities** — branches, PRs, tickets, CI runs,
+containers. Unlike a dashboard, these aren't fetched, shown once, and thrown
+away. Entities are typed, queryable and persisted as a correlated graph in an
+embedded database on your machine.
 
-## How it fits together
+Every change streams out of the store as a live-query delta into a
+derivation engine. **Correlators** draw edges between entities from
+different sources — this branch implements that ticket, this container runs
+that image, this PR's commit is what's deployed. **Rules** then promote what the
+graph knows into **situations** — *"PR merged but the ticket is still open"* —
+each with a **loudness** that decides how hard it tugs at your attention at
+the current moment in time.
 
-Salience connects to your tools (git, GitHub, Bitbucket, Jira, Docker, …) and produces **entities** — branches, PRs, tickets, containers. A small **derivation engine** joins entities across sources to surface cross-source insights no single tool can know on its own. The UI is composed of **tiles** you can rearrange.
+The map is just a lens over that graph.
 
-The same correlated context is exposed over an **MCP server**, so Claude, Codex, Cursor, or any MCP-aware tool can answer "what's my stand-up today?" without you copying and pasting.
+### Agents read the same graph
+
+Because the graph is the substrate, the same correlated context is open to
+your AI tools: Salience ships with an **MCP server**. Point your AI agent at
+it and ask in natural language: "What's my stand-up today?", "Can I unblock
+anyone?", "What work was on the last deployment?".
 
 [Read the docs →](/docs/) · [View on GitHub →](https://github.com/clegginabox/salience-macos)
