@@ -23,4 +23,4 @@ Start with **Install** if you're new, or jump straight to **The Map**, **MCP ser
 - **[Dashboard, Timeline & Explore →](/docs/views)** — the secondary views
 - **[Entities, correlations & situations →](/docs/concepts)** — how Salience thinks
 
-If something isn't working, **[Troubleshooting →](/docs/troubleshooting)** is the place to start.
+If something isn't working, **[Troubleshooting →](/docs/troubleshooting)** is the place to start. For everything else — questions, feedback, or just to say hi — join the [Discord](https://discord.gg/NErgbMHJr).
