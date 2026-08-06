@@ -50,3 +50,12 @@
   .VPHero.has-image .image { flex-grow: 1; min-width: 0; padding-left: 32px; }
   .VPHero.has-image .main { flex-shrink: 0; }
 }
+
+/* medium-zoom: sit above the nav bar */
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  z-index: 999;
+}
+.medium-zoom-image {
+  cursor: zoom-in;
+}

@@ -92,7 +92,7 @@ export default defineConfig({
 
     footer: {
       message: 'Salience is a desktop app for developers.',
-      copyright: 'Released under the MIT License.',
+      copyright: '© 2026 Paul Clegg. Closed source during pre-release.',
     },
   },
 });
