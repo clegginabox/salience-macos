@@ -62,9 +62,9 @@ right time.
 
 ![The worktrees page with per-branch status phrases and disk sizes](/screenshots/worktrees.png)
 
-**Stand-up — your week, organised by what needs you, not by ticket ID**
+**My Work — everything in flight, grouped by what's wrong, worst first**
 
-![Stand-up grouped by status: changes requested, stuck in review, CI failing](/screenshots/my-work-list.png)
+![My Work: out-of-sync, stale, and in-progress sections with per-item chain state](/screenshots/my-work.png)
 
 **Suggested — the right action shows up where you already are**
 
@@ -72,7 +72,7 @@ right time.
 
 **Command palette — every action, every entity, one keystroke away**
 
-![Command palette over the console view](/screenshots/command-palette.png)
+![The command palette: actions, work, recipes, and map navigation in one list](/screenshots/command-palette.png)
 
 **Console — your build output, your terminal, your stack traces, together**
 

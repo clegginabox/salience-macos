@@ -10,7 +10,7 @@ Both views are built from *units of work*: one piece of work joined across every
 
 Units grouped into sections, rendered in a fixed priority order — the top of the page is always the most urgent thing. Only sections with something in them appear.
 
-![My Work](/screenshots/my-work-list.png)
+![My Work: priority sections with per-item chain state](/screenshots/my-work.png)
 
 | Section | What it means |
 |---------|---------------|

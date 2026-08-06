@@ -21,7 +21,7 @@ Every open starts fresh at the root with an empty query, so "⌘K and start typi
 
 Opening the palette closes any HUD popover that was showing.
 
-![Command palette over the console view](/screenshots/command-palette.png)
+![The command palette open, showing its root groups](/screenshots/command-palette.png)
 
 ## What's in it
 
