@@ -66,6 +66,8 @@ Docker Compose services declared in the project render as buildings on the desk.
 
 Right-clicking a building opens a command wheel whose items — tail logs, shell, up, reconcile — copy the corresponding `docker compose` command to your clipboard for you to run in a terminal. Salience never executes them itself.
 
+![Compose services as buildings on the desk, with the compose.yaml diff in the detail panel](/screenshots/map-compose.png)
+
 ## Notes and drawn edges
 
 Right-click a file node for a ring menu with two actions:

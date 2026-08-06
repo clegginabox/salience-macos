@@ -74,9 +74,9 @@ right time.
 
 ![The command palette: actions, work, recipes, and map navigation in one list](/screenshots/command-palette.png)
 
-**Console — your build output, your terminal, your stack traces, together**
+**Console — every run's result, its output, and a terminal, one keystroke away**
 
-![Build and log output in the console](/screenshots/console.png)
+![The console pane over the map: run history, a phpcs report, and a terminal](/screenshots/console-pane.png)
 
 ## How it works
 
