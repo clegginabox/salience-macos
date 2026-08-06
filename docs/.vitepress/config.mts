@@ -29,6 +29,7 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
+      { text: 'Gallery', link: '/gallery' },
       { text: 'Docs', link: '/docs/' },
     ],
 
