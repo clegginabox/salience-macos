@@ -66,9 +66,9 @@ right time.
 
 ![My Work: out-of-sync, stale, and in-progress sections with per-item chain state](/screenshots/my-work.png)
 
-**Suggested — the right action shows up where you already are**
+**Suggested — change a test file and "run this test" appears, with its last result**
 
-![Suggested actions for the current branch](/screenshots/checks-tests.png)
+![Suggested test and lint actions for the changed files, with pass/clean chips](/screenshots/build.png)
 
 **Command palette — every action, every entity, one keystroke away**
 

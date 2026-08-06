@@ -48,7 +48,7 @@ Each row prints the exact command it would run, including the `docker compose ex
 
 Roles Salience refuses to auto-run — migrations, formatters, lockfile actions — still surface as cues, but with an inert Run button. Hover it for the reason. The same rule applies when no runtime could be resolved.
 
-![Suggested actions matched against the changed files](/screenshots/checks-tests.png)
+![Suggested actions cued by the changed files, with result chips from earlier runs](/screenshots/build.png)
 
 ### Checks
 
