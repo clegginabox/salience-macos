@@ -30,7 +30,3 @@ Full walkthrough: [First run →](https://clegginabox.github.io/salience-macos/d
 ## This repository
 
 This repo hosts the documentation site (built with VitePress from [`docs/`](docs/)) and the release distribution for Salience.
-
-## License
-
-Released under the [MIT License](https://opensource.org/licenses/MIT).
