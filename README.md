@@ -29,6 +29,12 @@ You glance at it. Your AI agents query it. Nothing leaves your machine.
 
 **Works with:** GitHub (PRs, reviews, CI, issues) · Jira · AWS (ECR/ECS) · Sentry · Docker Compose — [connect your tools →](https://clegginabox.github.io/salience-macos/docs/connect-your-tools)
 
+## Writing PHP? Start here
+
+Salience works with any git repository, but it goes deepest on PHP today. It reads your `composer.json`, cues PHPUnit, Pest and PHPCS runs for the files you changed, one-clicks PHPStan, Psalm and `composer audit`, syncs your Symfony or Laravel routes, and answers a question grep can't: *what code does this route actually touch?* — in the app, and for your agents over MCP.
+
+[Salience for PHP →](https://clegginabox.github.io/salience-macos/docs/php)
+
 ## Why
 
 Salience is [Home Assistant](https://www.home-assistant.io/) for your dev tools. Each tool knows its own slice; none of them can answer the questions that span them — *is my ticket in sync with my PR? What's actually deployed right now?* Salience joins the slices and turns the questions into answers. [The full story →](https://clegginabox.github.io/salience-macos/docs/about)

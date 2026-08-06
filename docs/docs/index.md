@@ -8,6 +8,7 @@ Start with **Install** if you're new, or jump straight to **The Map**, **MCP ser
 
 - **[Install →](/docs/install)** — download, system requirements, first launch
 - **[First run →](/docs/getting-started)** — add a project, connect a tool, see the map fill in
+- **[Salience for PHP →](/docs/php)** — the PHP tour: test cues, one-click checks, Symfony/Laravel routes, the code graph
 - **[The Map →](/docs/map)** — the main surface: your work as a living map
 - **[Connect your tools →](/docs/connect-your-tools)** — GitHub, Jira, AWS, Sentry, Docker
 - **[MCP server →](/docs/mcp)** — point Claude, Codex, or Cursor at Salience
