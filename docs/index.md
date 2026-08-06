@@ -5,11 +5,11 @@ hero:
   name: Salience
   text: Your work, as a living map.
   tagline: Branches, PRs, tickets, CI, deploys — and the agents working on them — joined into one calm map on your second monitor. Local, private, yours.
-  # HERO IMAGE SLOT — map screenshot: mid-zoom, populated, agent presence + one glowing situation.
-  # Uncomment when captured:
-  # image:
-  #   src: /screenshots/map-hero.png
-  #   alt: The Salience map showing branches, PRs, tickets and CI joined as islands
+  # Interim hero: desk altitude. Swap for a network-altitude shot (islands,
+  # stations, agent presence) once that view is visually ready.
+  image:
+    src: /screenshots/map-desk.png
+    alt: The Salience map — the working set as file nodes with typed edges between them
   actions:
     - theme: brand
       text: Download for macOS
@@ -52,8 +52,15 @@ right time.
 
 ## See it work
 
-<!-- GALLERY SLOT: zoomed-out map / world view -->
-<!-- GALLERY SLOT: mid-zoom island showing branch + PR + ticket + CI joined -->
+<!-- GALLERY SLOT: zoomed-out map / world view (network altitude, once visually ready) -->
+
+**Code graph — pick a route, walk the calls, open anything in your IDE**
+
+![A route walked through the call graph, with source and callers in the context panel](/screenshots/code-graph.png)
+
+**Worktrees — every agent checkout, triaged: what matters, what's just eating disk**
+
+![The worktrees page with per-branch status phrases and disk sizes](/screenshots/worktrees.png)
 
 **Stand-up — your week, organised by what needs you, not by ticket ID**
 
