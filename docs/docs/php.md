@@ -28,9 +28,11 @@ Each appears only when your project shows evidence of that tool, never auto-runs
 
 ![The Checks tab with composer audit findings expanded](/screenshots/checks.png)
 
-## A code graph that answers route questions
+## Looks like API docs. It's your actual call graph
 
-Salience indexes your symbols using the autoload roots in your `composer.json` — the first index builds automatically when you add the project — then syncs routes with your framework's own dump: `debug:router` for Symfony, `route:list` for Laravel. Pick a route and Salience walks the call graph from its controller and draws the files involved: a map of the code paths that route depends on, something grep can't give you. ⌘-click any node to open it in your IDE.
+Salience indexes your symbols using the autoload roots in your `composer.json` — the first index builds automatically when you add the project — then syncs routes with your framework's own dump: `debug:router` for Symfony, `route:list` for Laravel. The result reads like your API docs: a filterable list of every route. Except each row opens the code behind it — pick a route and Salience walks the call graph from its controller and draws the files involved: a map of the code paths that route depends on, something grep can't give you. ⌘-click any node to open it in your IDE.
+
+Nothing is installed in your project to make this happen — no composer package, no mounted route, no instrumentation, and you never have to run the app. Salience reads the code from outside, and the graph stays on your machine.
 
 ![The Code Graph page: routes navigator, a walked route rendered as a file map, and the context panel](/screenshots/code-graph.png)
 

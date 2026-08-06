@@ -20,7 +20,7 @@ You glance at it. Your AI agents query it. Nothing leaves your machine.
 - **[Checks](https://clegginabox.github.io/salience-macos/docs/build#checks)** — one-click `composer audit`, PHPStan, Psalm, schema validation. Verdicts are cached, so you can always see what they said last time.
 - **[Stack](https://clegginabox.github.io/salience-macos/docs/build#stack)** — your Docker Compose services with live health state. Start, stop, restart, tail logs.
 - **[Review](https://clegginabox.github.io/salience-macos/docs/review)** — your branch's diff against the right base, before you push. Double-click any file to open it in your editor.
-- **[Code Graph](https://clegginabox.github.io/salience-macos/docs/code-graph)** — pick an HTTP route, see the code it actually touches (PHP today).
+- **[Code Graph](https://clegginabox.github.io/salience-macos/docs/code-graph)** — your routes, like API docs — except each one opens the actual call graph. Pick a route, see the code it touches, ⌘-click into your IDE (PHP today).
 - **[MCP server](https://clegginabox.github.io/salience-macos/docs/mcp)** — point Claude, Codex or Cursor at the same joined graph. "What's my stand-up?" "Which worktrees can I delete?" No more scraping five tabs.
 - **[Command palette](https://clegginabox.github.io/salience-macos/docs/command-palette)** — ⌘K for every task, container, PR URL and map jump.
 - **[Private by design](https://clegginabox.github.io/salience-macos/docs/privacy)** — an encrypted database on your machine, credentials in the macOS Keychain, and a built-in network monitor showing every request the app makes. You're the customer, not the product.

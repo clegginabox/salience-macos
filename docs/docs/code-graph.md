@@ -1,6 +1,6 @@
 # Code Graph
 
-Salience indexes your project's symbols and the relationships between them, then lets you ask a question grep can't answer: *what code does this HTTP route actually touch?* Pick a route, and Salience walks the call graph outward from its controller and draws the files involved.
+Salience indexes your project's symbols and the relationships between them, then lets you ask a question grep can't answer: *what code does this HTTP route actually touch?* Pick a route, and Salience walks the call graph outward from its controller and draws the files involved. It reads like your API docs — a filterable list of every route — except each row opens the actual call graph behind it. Nothing is installed in your project to make this happen: no package, no instrumentation, and you never have to run the app.
 
 **PHP is the only language indexed today.** Everything on this page — the graph, the route walk, and the [code-graph MCP tools](/docs/mcp#code-graph-php-only) — is PHP-only. The data model isn't PHP-specific, but nothing else populates it yet.
 
