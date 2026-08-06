@@ -1,6 +1,6 @@
 # Salience documentation
 
-Welcome. Salience is a desktop app for developers — it follows the branch wherever it goes and surfaces what matters across your tools.
+Salience is a macOS app that knows what you're working on. It connects the tools you already use — GitHub, Jira, CI, Docker, AWS, Sentry — and joins what they know into one live picture: every branch, PR, ticket and build, what state it's in, and what needs you. You glance at it; your agents query it over [MCP](/docs/mcp).
 
 Start with **Install** if you're new, or jump straight to **The Map**, **MCP server**, or **Privacy & security** if that's why you're here.
 

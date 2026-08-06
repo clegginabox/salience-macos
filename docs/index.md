@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: Salience
-  text: Your work, as a living map.
-  tagline: Branches, PRs, tickets, CI, deploys — and the agents working on them — joined into one calm map on your second monitor. Local, private, yours.
+  text: Know the state of your work without opening five tabs.
+  tagline: Salience connects GitHub, Jira, CI, Docker, AWS and Sentry into one live picture of your work. You glance at it. Your agents query it. Nothing leaves your machine.
   # Interim hero: desk altitude. Swap for a network-altitude shot (islands,
   # stations, agent presence) once that view is visually ready.
   image:
