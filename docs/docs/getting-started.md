@@ -8,6 +8,10 @@ Open Salience and click **Add project** in the sidebar. Pick a directory on your
 
 If the directory is a git repository, your local branches show up immediately as entities of type `git.branch`. No tools connected yet — this is local data only.
 
+Back on **Home**, each project renders as a card showing its checked-out branch and that branch's state — and once situations start firing, a **Needs attention** feed sits above the cards collecting everything that wants a look, across all your projects.
+
+![Home: the Needs attention feed and per-project cards with branch state](/screenshots/home.png)
+
 ## 2. Connect one tool
 
 Open **Connections** in the sidebar and pick one tool to start with. GitHub is the most common starting point:

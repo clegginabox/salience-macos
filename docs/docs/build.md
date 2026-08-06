@@ -48,7 +48,7 @@ Each row prints the exact command it would run, including the `docker compose ex
 
 Roles Salience refuses to auto-run — migrations, formatters, lockfile actions — still surface as cues, but with an inert Run button. Hover it for the reason. The same rule applies when no runtime could be resolved.
 
-![Suggested actions matched against the changed files](/screenshots/checks-tests.png)
+![Suggested actions cued by the changed files, with result chips from earlier runs](/screenshots/build.png)
 
 ### Checks
 
@@ -99,7 +99,7 @@ Press **⌘J** (or click the terminal icon in the header, or use Toggle console 
 - Drag the left edge to resize; the width is remembered across launches.
 - **Clear console** is in the palette. The palette prints `⌃L` beside it, but that key isn't actually bound — use the palette entry.
 
-![A test run streaming into the console pane](/screenshots/console.png)
+![The console pane: run history with pass/fail results and an embedded terminal](/screenshots/console-pane.png)
 
 ## Keyboard
 

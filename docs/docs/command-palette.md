@@ -21,7 +21,7 @@ Every open starts fresh at the root with an empty query, so "⌘K and start typi
 
 Opening the palette closes any HUD popover that was showing.
 
-![Command palette over the console view](/screenshots/command-palette.png)
+![The command palette open, showing its root groups](/screenshots/command-palette.png)
 
 ## What's in it
 
@@ -69,7 +69,7 @@ Only one popover is open at a time; opening another replaces it. Popovers don't 
 
 Beside the pills is the sync indicator. Hover it for per-connector freshness; clicking it forces a sync pass rather than waiting for the next interval.
 
-<!-- SCREENSHOT SLOT: HUD bar close-up with the PR pill popover open, showing reviewers and the open-on-host footer -->
+![The PR pill popover: state, reviewers, and open-on-GitHub footer](/screenshots/hud-pr-popover.png)
 
 ## Branch switcher
 

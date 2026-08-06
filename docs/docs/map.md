@@ -2,7 +2,7 @@
 
 The Map is a spatial view of what you're working on: your current branch's changed files laid out as a canvas you arrange yourself, with the project's wider branch network one zoom-out away. Open it from **Dev Tools → Map** in the sidebar.
 
-<!-- SCREENSHOT SLOT: desk altitude — file nodes on the canvas with the side panel open -->
+![Desk altitude: the working set as file nodes, typed edges between them, gazetteer open](/screenshots/map-desk.png)
 
 ## Two altitudes
 
@@ -66,12 +66,16 @@ Docker Compose services declared in the project render as buildings on the desk.
 
 Right-clicking a building opens a command wheel whose items — tail logs, shell, up, reconcile — copy the corresponding `docker compose` command to your clipboard for you to run in a terminal. Salience never executes them itself.
 
+![Compose services as buildings on the desk, with the compose.yaml diff in the detail panel](/screenshots/map-compose.png)
+
 ## Notes and drawn edges
 
 Right-click a file node for a ring menu with two actions:
 
 - **Add note** — attach a sticky note to the file. Click a note to read, edit, pin, or dismiss it.
 - **Create edge** — draw a typed edge to another node, choosing from eight kinds: relates to, depends on, reads, writes, suspected cause, explains, blocks, do not change without.
+
+![The note composer, anchored to a file node](/screenshots/map-note.png)
 
 Agents connected over MCP can also leave notes. Agent notes that you neither pin nor dismiss are removed after 14 days; your own notes and anything pinned never decay.
 
@@ -80,6 +84,8 @@ Agents connected over MCP can also leave notes. Agent notes that you neither pin
 The collapsible left panel has four sections: **Mission** (the branch's unit of work — ticket, PR, CI), **Gazetteer** (the working set as a directory tree; clicking a file flies the camera to its node), **Errors** (above), and **Checks** (per-file diagnostics from health-check runs). Files with check errors also render as breaches in a faint field over the canvas, which fades as the results age — fresh for 10 minutes, gone after 4 hours.
 
 Selecting a file opens a detail panel on the right with its diff, diagnostics, and any crashing frames from active error paths.
+
+![A selected file with the detail panel showing its diff](/screenshots/map-detail.png)
 
 ## Keyboard and navigation
 

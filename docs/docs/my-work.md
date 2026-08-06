@@ -10,7 +10,7 @@ Both views are built from *units of work*: one piece of work joined across every
 
 Units grouped into sections, rendered in a fixed priority order — the top of the page is always the most urgent thing. Only sections with something in them appear.
 
-![My Work](/screenshots/my-work-list.png)
+![My Work: priority sections with per-item chain state](/screenshots/my-work.png)
 
 | Section | What it means |
 |---------|---------------|
@@ -47,7 +47,7 @@ The header toggles between two renderings of the same rows:
 - **Board** (default) — a kanban of status columns: To do, In progress, Blocked, Code review, In test, Done. Empty columns stay visible so the pipeline shape reads end-to-end.
 - **List** — the same rows grouped by status, empty groups dropped.
 
-![Stand-up board](/screenshots/my-work-kanban.png)
+![The Stand-up board: ticket-anchored cards with PR and review state joined on](/screenshots/standup.png)
 
 ### Filters
 

@@ -5,11 +5,11 @@ hero:
   name: Salience
   text: Your work, as a living map.
   tagline: Branches, PRs, tickets, CI, deploys — and the agents working on them — joined into one calm map on your second monitor. Local, private, yours.
-  # HERO IMAGE SLOT — map screenshot: mid-zoom, populated, agent presence + one glowing situation.
-  # Uncomment when captured:
-  # image:
-  #   src: /screenshots/map-hero.png
-  #   alt: The Salience map showing branches, PRs, tickets and CI joined as islands
+  # Interim hero: desk altitude. Swap for a network-altitude shot (islands,
+  # stations, agent presence) once that view is visually ready.
+  image:
+    src: /screenshots/map-desk.png
+    alt: The Salience map — the working set as file nodes with typed edges between them
   actions:
     - theme: brand
       text: Download for macOS
@@ -52,24 +52,31 @@ right time.
 
 ## See it work
 
-<!-- GALLERY SLOT: zoomed-out map / world view -->
-<!-- GALLERY SLOT: mid-zoom island showing branch + PR + ticket + CI joined -->
+<!-- GALLERY SLOT: zoomed-out map / world view (network altitude, once visually ready) -->
 
-**Stand-up — your week, organised by what needs you, not by ticket ID**
+**Code graph — pick a route, walk the calls, open anything in your IDE**
 
-![Stand-up grouped by status: changes requested, stuck in review, CI failing](/screenshots/my-work-list.png)
+![A route walked through the call graph, with source and callers in the context panel](/screenshots/code-graph.png)
 
-**Suggested — the right action shows up where you already are**
+**Worktrees — every agent checkout, triaged: what matters, what's just eating disk**
 
-![Suggested actions for the current branch](/screenshots/checks-tests.png)
+![The worktrees page with per-branch status phrases and disk sizes](/screenshots/worktrees.png)
+
+**My Work — everything in flight, grouped by what's wrong, worst first**
+
+![My Work: out-of-sync, stale, and in-progress sections with per-item chain state](/screenshots/my-work.png)
+
+**Suggested — change a test file and "run this test" appears, with its last result**
+
+![Suggested test and lint actions for the changed files, with pass/clean chips](/screenshots/build.png)
 
 **Command palette — every action, every entity, one keystroke away**
 
-![Command palette over the console view](/screenshots/command-palette.png)
+![The command palette: actions, work, recipes, and map navigation in one list](/screenshots/command-palette.png)
 
-**Console — your build output, your terminal, your stack traces, together**
+**Console — every run's result, its output, and a terminal, one keystroke away**
 
-![Build and log output in the console](/screenshots/console.png)
+![The console pane over the map: run history, a phpcs report, and a terminal](/screenshots/console-pane.png)
 
 ## How it works
 

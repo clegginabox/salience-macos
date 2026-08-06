@@ -13,7 +13,7 @@ A per-project stack of tiles. First run is deliberately blank — you build it.
 
 The layout persists per project, locally (SQLite) — switching projects switches layouts.
 
-<!-- SCREENSHOT SLOT: dashboard in edit mode with two or three tiles and the add-tile picker open -->
+![The dashboard in edit mode, with the add-tile row along the bottom](/screenshots/dashboard-edit.png)
 
 ### Tile types
 
@@ -33,7 +33,7 @@ The project's live stream — every domain event Salience records, newest first.
 
 Filter by source with the chip bar — **PRs, Jira, Issues, CI, Git, AWS** — all active by default. Expanding a row walks the correlation graph around the event's entity; the **Chain depth** control in the header sets how many hops out that walk goes.
 
-<!-- SCREENSHOT SLOT: timeline with mixed PR/CI/git events, one row expanded showing correlated entities -->
+![The timeline: bucketed events with source filter chips](/screenshots/timeline.png)
 
 The stream is live — new events appear as syncs land, no refresh needed. Events only exist from the point you added the project and connected tools; Salience doesn't backfill history that happened before it was watching. See [Connect your tools](/docs/connect-your-tools) for what produces which events.
 
