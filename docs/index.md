@@ -54,6 +54,10 @@ right time.
 
 <!-- GALLERY SLOT: zoomed-out map / world view (network altitude, once visually ready) -->
 
+**Home — every project, its checked-out branch, and what needs your attention**
+
+![Home: the Needs Attention feed across all projects, above per-project cards with branch state](/screenshots/home.png)
+
 **Your stack, on the map — compose services as buildings, lit by their running containers**
 
 ![Docker Compose services rendered as buildings on the map, with the compose.yaml diff open](/screenshots/map-compose.png)
