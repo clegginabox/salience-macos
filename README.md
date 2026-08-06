@@ -4,7 +4,7 @@
 
 Salience is a macOS desktop app for developers. It follows your git branches across the tools they touch — PRs, tickets, CI, containers, deploys — joins what it finds into one correlated graph on your machine, and renders it as a calm, glanceable map that lives on your second monitor.
 
-[**Download for macOS →**](https://github.com/clegginabox/salience-macos/releases/latest) · [**Documentation →**](https://clegginabox.github.io/salience-macos/docs/) · [**Gallery →**](https://clegginabox.github.io/salience-macos/gallery)
+[**Download for macOS →**](https://github.com/clegginabox/salience-macos/releases/latest) · [**Documentation →**](https://clegginabox.github.io/salience-macos/docs/) · [**Gallery →**](https://clegginabox.github.io/salience-macos/gallery) · [**Discord →**](https://discord.gg/NErgbMHJr)
 
 ![The Salience map: the working set as file nodes with typed edges between them](docs/public/screenshots/map-desk.png)
 

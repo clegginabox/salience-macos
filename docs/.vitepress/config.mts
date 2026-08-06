@@ -85,6 +85,7 @@ export default defineConfig({
     },
 
     socialLinks: [
+      { icon: 'discord', link: 'https://discord.gg/NErgbMHJr' },
       { icon: 'github', link: 'https://github.com/clegginabox/salience-macos' },
     ],
 
