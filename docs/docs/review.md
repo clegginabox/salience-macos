@@ -21,7 +21,7 @@ The left column lists the changed files with a count. Click a row to load its di
 
 The diff pane header carries the path, `+`/`−` totals, the hunk count, and an **Open** button that hands the file to your default editor. The body renders hunk by hunk, with old and new line numbers and syntax highlighting. Binary or unchanged files read *No diff available*.
 
-<!-- SCREENSHOT SLOT: Review page — changed files list on the left, a syntax-highlighted file diff on the right, ticket tile above it -->
+![The Review page: changed files against the base branch, with an inline diff](/screenshots/review.png)
 
 ## The ticket
 

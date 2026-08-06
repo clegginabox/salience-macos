@@ -200,6 +200,8 @@ Each detected launcher declares what it can do — open a path, open a path at a
 
 **Where you set the defaults:** the app footer, which carries three pickers — one each for editor, terminal, and file manager. Picking an option sets the default for that slot. Your choices persist in the same local SQLite database as your connector credentials, keyed under `launchers`, and apply globally rather than per project.
 
+![The editor picker in the app footer, listing detected editors](/screenshots/launcher-picker.png)
+
 ## Credentials
 
 Connector tokens are **not** in any of the files above — they're stored in an encrypted local SQLite database at `~/Library/Application Support/clegginabox.salience/`. See [Privacy & security](/docs/privacy) for details.

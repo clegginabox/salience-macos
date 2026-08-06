@@ -2,7 +2,7 @@
 
 If you use git worktrees — especially with AI coding agents that each get their own checkout — they accumulate. The Worktrees page (sidebar → **Dev Tools → Worktrees**) is a cleanup-triage list: every worktree in the project with its PR and CI state joined on, so you can see at a glance which checkouts still matter and which are just eating disk.
 
-<!-- SCREENSHOT SLOT: worktrees page with a mix of statuses — CI failing, uncommitted, merged -->
+![The Worktrees page: filter chips, per-row status phrases, disk sizes](/screenshots/worktrees.png)
 
 ## The list
 

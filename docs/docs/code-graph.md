@@ -6,7 +6,7 @@ Salience indexes your project's symbols and the relationships between them, then
 
 Find it at **Dev Tools → Code Graph** in the project sidebar.
 
-<!-- SCREENSHOT SLOT: the Code Graph page — routes navigator on the left, a route walk rendered as a file map in the centre, context panel on the right -->
+![The Code Graph page: routes navigator, a walked route rendered as a file map, and the context panel](/screenshots/code-graph.png)
 
 ## Prerequisites
 
