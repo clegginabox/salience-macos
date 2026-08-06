@@ -28,3 +28,25 @@
 /* Slightly tighter heading rhythm to match the app's calm feel */
 .vp-doc h1 { letter-spacing: -0.02em; }
 .vp-doc h2 { letter-spacing: -0.015em; }
+
+/* Hero image is an app screenshot, not a logo — let it breathe.
+   Overrides VPHero's 320px logo box and glow backdrop. */
+.VPHero .image-container {
+  width: 100% !important;
+  max-width: 680px;
+  height: auto !important;
+  transform: none !important;
+  margin: 0 auto;
+}
+.VPHero .image-bg { display: none !important; }
+.VPHero .image-src {
+  position: static !important;
+  width: 100%;
+  max-width: 100% !important;
+  max-height: none !important;
+  transform: none !important;
+}
+@media (min-width: 960px) {
+  .VPHero.has-image .image { flex-grow: 1; min-width: 0; padding-left: 32px; }
+  .VPHero.has-image .main { flex-shrink: 0; }
+}

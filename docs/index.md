@@ -54,6 +54,14 @@ right time.
 
 <!-- GALLERY SLOT: zoomed-out map / world view (network altitude, once visually ready) -->
 
+**Your stack, on the map — compose services as buildings, lit by their running containers**
+
+![Docker Compose services rendered as buildings on the map, with the compose.yaml diff open](/screenshots/map-compose.png)
+
+**Select a file, see its diff — without leaving the map**
+
+![A selected file node with its diff in the map's detail panel](/screenshots/map-detail.png)
+
 **Code graph — pick a route, walk the calls, open anything in your IDE**
 
 ![A route walked through the call graph, with source and callers in the context panel](/screenshots/code-graph.png)
