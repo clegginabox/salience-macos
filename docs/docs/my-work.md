@@ -47,7 +47,7 @@ The header toggles between two renderings of the same rows:
 - **Board** (default) — a kanban of status columns: To do, In progress, Blocked, Code review, In test, Done. Empty columns stay visible so the pipeline shape reads end-to-end.
 - **List** — the same rows grouped by status, empty groups dropped.
 
-![Stand-up board](/screenshots/my-work-kanban.png)
+![The Stand-up board: ticket-anchored cards with PR and review state joined on](/screenshots/standup.png)
 
 ### Filters
 
