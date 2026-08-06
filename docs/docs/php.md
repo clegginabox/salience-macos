@@ -30,7 +30,7 @@ Each appears only when your project shows evidence of that tool, never auto-runs
 
 ## Looks like API docs. It's your actual call graph
 
-Salience indexes your symbols using the autoload roots in your `composer.json` — the first index builds automatically when you add the project — then syncs routes with your framework's own dump: `debug:router` for Symfony, `route:list` for Laravel. The result reads like your API docs: a filterable list of every route. Except each row opens the code behind it — pick a route and Salience walks the call graph from its controller and draws the files involved: a map of the code paths that route depends on, something grep can't give you. ⌘-click any node to open it in your IDE.
+Salience indexes your symbols using the autoload roots in your `composer.json` — the first index builds automatically when you add the project — then syncs routes with your framework's own dump: `debug:router` for Symfony, `route:list` for Laravel. Thanks to [Mago](https://github.com/carthage-software/mago), the Rust-based PHP toolchain, Salience builds a real AST of your codebase — the graph is derived from parse trees, not regexes. The result reads like your API docs: a filterable list of every route. Except each row opens the code behind it — pick a route and Salience walks the call graph from its controller and draws the files involved: a map of the code paths that route depends on, something grep can't give you. ⌘-click any node to open it in your IDE.
 
 Nothing is installed in your project to make this happen — no composer package, no mounted route, no instrumentation, and you never have to run the app. Salience reads the code from outside, and the graph stays on your machine.
 

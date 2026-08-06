@@ -21,6 +21,8 @@ Find it at **Dev Tools → Code Graph** in the project sidebar.
 
 ## Building the graph
 
+The parsing is powered by [Mago](https://github.com/carthage-software/mago), the Rust-based PHP toolchain: Salience uses it to build an AST of your codebase and derives the symbol graph from that.
+
 The first ingest fires automatically, in the background, when you add a project — you don't have to do anything. It's not on a timer and there's no file watcher yet, so after that, re-ingest is a manual step: open **Graph diagnostics** and click **Ingest now**.
 
 Re-ingest is incremental and cheap. Only files whose structure changed get re-parsed, and a pass where nothing changed skips the store write entirely. It's non-destructive and idempotent — running it twice does nothing the second time.
