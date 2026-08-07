@@ -12,6 +12,17 @@ Salience runs on your machine. Your data stays on your machine. This page is an 
 
 There is no Salience server. There is no cloud sync. There is no analytics pipeline.
 
+## Read-only by design
+
+Salience treats your tools as sources to read, never targets to change:
+
+- **No write access.** Connectors fetch state — they never open, close, comment on, edit, or merge anything. GitHub tokens only need read access to Pull requests, Contents, and Checks; [fine-grained tokens](/docs/connect-your-tools#github) are recommended because they're least-privilege by construction.
+- **Over-privileged tokens are rejected.** Connect a classic GitHub PAT carrying more scope than Salience needs — say `delete_repo` or `admin:org` — and the connection is refused before the token touches the database, with an error naming exactly which scopes to remove.
+- **Jira is endpoint-allowlisted.** The Jira connector can only call a fixed allowlist of read endpoints. A request to anything else is refused by the client itself — it's not a convention, it's a wall.
+- **AWS comes with its own policy.** The Permissions card lists every AWS API action Salience can call, each with a plain-English reason — and [**Copy least-privilege policy**](/docs/connect-your-tools#least-privilege-policy) puts a ready-to-attach IAM policy on your clipboard, built from that same list: `Describe*`, `List*`, and one `sts:GetCallerIdentity`. No write, delete, or deploy actions. Attach it to a dedicated role and Salience never needs a broad profile at all.
+
+None of this asks for trust: every call any connector makes shows up in the [network monitor](#network-monitor), so you can watch the traffic yourself.
+
 ## Network monitor
 
 Salience makes outbound HTTP calls to the tools you've connected (GitHub, Bitbucket, Jira) plus Sentry while crash reporting is enabled. To audit them with your own eyes, open **Network Inspector** in the sidebar. Every request the app makes is listed there: destination, method, response status, timing.
