@@ -48,7 +48,7 @@ A few things worth knowing:
 - **Go to page…** covers project pages (My Work, Timeline, Stand-up, Build, Review, GitHub, settings) and global ones (Projects, Settings, Network Inspector, Command Inspector, Debug). The Map is reached through the Network group, not this list.
 - **Recipes** are TOML manifests in `~/.salience/recipes/` that contribute curated commands per framework. Salience activates the ones matching your project. Each command either runs through the console or copies its command line, depending on how the recipe declares it.
 - The AWS group also shows a `Tail CloudWatch logs…` row. It's a placeholder — selecting it does nothing yet.
-- The palette prints `⌃L` next to Clear console, but only ⌘K and ⌘J are registered as global keys. Use the palette entry.
+- The palette prints `⌃L` next to Clear console, but only ⌘K, ⌘J and ⌘B are registered as global keys. Use the palette entry.
 
 Container and stack commands take no confirmation step because they're reversible. Anything destructive stays out of the palette — Salience never holds the gun.
 

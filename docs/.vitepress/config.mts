@@ -68,6 +68,7 @@ export default defineConfig({
             { text: 'Connect your tools', link: '/docs/connect-your-tools' },
             { text: 'Configuration', link: '/docs/configuration' },
             { text: 'MCP server', link: '/docs/mcp' },
+            { text: 'Keyboard shortcuts', link: '/docs/shortcuts' },
           ],
         },
         {
