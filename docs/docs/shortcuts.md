@@ -1,6 +1,6 @@
 # Keyboard shortcuts
 
-Every shortcut in Salience, in one place. There are only two keys worth memorising — **⌘K** for the [command palette](/docs/command-palette) and **⌘J** for the [console pane](/docs/build#the-console-pane); those two are the app's only global bindings. Everything else below belongs to the surface it's listed under.
+Every shortcut in Salience, in one place. The keys worth memorising are **⌘K** for the [command palette](/docs/command-palette), **⌘J** for the [console pane](/docs/build#the-console-pane), and **⌘B** for the sidebar — the app's only global bindings. Everything else below belongs to the surface it's listed under.
 
 ## Everywhere
 
@@ -8,6 +8,7 @@ Every shortcut in Salience, in one place. There are only two keys worth memorisi
 |-----|--------|
 | ⌘K (or Ctrl+K) | Toggle the [command palette](/docs/command-palette) |
 | ⌘J | Toggle the [console pane](/docs/build#the-console-pane) |
+| ⌘B | Toggle the sidebar |
 
 ## The HUD
 
