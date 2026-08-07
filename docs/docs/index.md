@@ -21,6 +21,7 @@ Start with **Install** if you're new, or jump straight to **The Map**, **MCP ser
 - **[Review →](/docs/review)** — changed files, diffs, open-in-editor
 - **[Code Graph →](/docs/code-graph)** — route-seeded call-graph maps (PHP today)
 - **[Command palette & HUD →](/docs/command-palette)** — ⌘K and the pill bar
+- **[Keyboard shortcuts →](/docs/shortcuts)** — every binding, on one page
 - **[Dashboard, Timeline & Explore →](/docs/views)** — the secondary views
 - **[Entities, correlations & situations →](/docs/concepts)** — how Salience thinks
 
