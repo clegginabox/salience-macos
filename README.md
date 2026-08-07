@@ -47,8 +47,8 @@ Salience is [Home Assistant](https://www.home-assistant.io/) for your dev tools.
 
 Full walkthrough: [First run →](https://clegginabox.github.io/salience-macos/docs/getting-started)
 
-> **Pre-release:** Salience is shipping early to a small group of users. Expect rough edges — please report what you find on the [issues page](https://github.com/clegginabox/salience-macos/issues).
+> **Pre-release:** Salience is in early development. Expect rough edges — please report what you find on the [issues page](https://github.com/clegginabox/salience-macos/issues).
 
 ## This repository
 
-This repo hosts the documentation site (built with VitePress from [`docs/`](docs/)) and the release distribution for Salience.
+This repo hosts the documentation site and the release distribution for Salience.
