@@ -4,9 +4,11 @@
 
 Salience is a macOS app that knows what you're working on. It connects to the tools you already use — GitHub, Jira, CI, Docker, AWS, Sentry — and joins what they know into one live picture: every branch, PR, ticket and build, what state it's in, and what needs you.
 
-You glance at it. Your AI agents query it. Nothing leaves your machine.
+You glance at it. Your AI agents query it. There's no Salience cloud and no account — your graph stays on your Mac.
 
-[**Download for macOS →**](https://github.com/clegginabox/salience-macos/releases/latest) · [**Documentation →**](https://clegginabox.github.io/salience-macos/docs/) · [**Gallery →**](https://clegginabox.github.io/salience-macos/gallery) · [**Discord →**](https://discord.gg/NErgbMHJr)
+> **Alpha.** Salience is shipping early to a small group of users. It's free while it's in alpha; pricing comes later.
+
+[**Download the alpha →**](https://clegginabox.github.io/salience-macos/download) · [**Documentation →**](https://clegginabox.github.io/salience-macos/docs/) · [**Gallery →**](https://clegginabox.github.io/salience-macos/gallery) · [**Discord →**](https://discord.gg/NErgbMHJr)
 
 ![The Salience map: the working set as file nodes with typed edges between them](docs/public/screenshots/map-desk.png)
 
@@ -23,7 +25,7 @@ You glance at it. Your AI agents query it. Nothing leaves your machine.
 - **[Code Graph](https://clegginabox.github.io/salience-macos/docs/code-graph)** — your routes, like API docs — except each one opens the actual call graph. Pick a route, see the code it touches, ⌘-click into your IDE (PHP today).
 - **[MCP server](https://clegginabox.github.io/salience-macos/docs/mcp)** — point Claude, Codex or Cursor at the same joined graph. "What's my stand-up?" "Which worktrees can I delete?" No more scraping five tabs.
 - **[Command palette](https://clegginabox.github.io/salience-macos/docs/command-palette)** — ⌘K for every task, container, PR URL and map jump.
-- **[Private by design](https://clegginabox.github.io/salience-macos/docs/privacy)** — an encrypted database on your machine, credentials in the macOS Keychain, and a built-in network monitor showing every request the app makes. You're the customer, not the product.
+- **[Private by design](https://clegginabox.github.io/salience-macos/docs/privacy)** — your graph lives in an encrypted database on your Mac, with credentials in that same encrypted store, unlocked by a key in the macOS Keychain. A built-in network monitor lists every outbound request the app makes, so you can audit it yourself.
 
 ![My Work: everything in flight, grouped by what's wrong, worst first](docs/public/screenshots/my-work.png)
 
@@ -41,7 +43,7 @@ Salience is [Home Assistant](https://www.home-assistant.io/) for your dev tools.
 
 ## Getting started
 
-1. [Download the latest release](https://github.com/clegginabox/salience-macos/releases/latest) — macOS 13+, Apple Silicon and Intel.
+1. [Download the alpha](https://clegginabox.github.io/salience-macos/download) — macOS 13+, Apple Silicon and Intel.
 2. Add a project (any local git repository).
 3. [Connect a tool](https://clegginabox.github.io/salience-macos/docs/connect-your-tools) — GitHub, Jira, AWS, Sentry, Docker — and watch the picture fill in.
 

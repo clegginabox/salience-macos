@@ -4,7 +4,7 @@ layout: home
 hero:
   name: Salience
   text: Know the state of your work without opening five tabs.
-  tagline: Salience connects GitHub, Jira, CI, Docker, AWS and Sentry into one live picture of your work. You glance at it. Your agents query it. Nothing leaves your machine.
+  tagline: Salience connects GitHub, Jira, CI, Docker, AWS and Sentry into one live picture of your work. You glance at it. Your agents query it. There's no Salience cloud and no account — your graph stays on your Mac.
   # Interim hero: desk altitude. Swap for a network-altitude shot (islands,
   # stations, agent presence) once that view is visually ready.
   image:
@@ -12,8 +12,8 @@ hero:
     alt: The Salience map — the working set as file nodes with typed edges between them
   actions:
     - theme: brand
-      text: Download for macOS
-      link: https://github.com/clegginabox/salience-macos/releases/latest
+      text: Download the alpha
+      link: /download
     - theme: alt
       text: Read the docs
       link: /docs/
@@ -25,94 +25,57 @@ features:
     details: No inbox, no notifications, no modals. Salience promotes what matters into situations, each with a loudness that matches how urgently it needs you.
   - title: Readable by your agents
     details: The same joined graph the map renders ships with an MCP server. Point your agent at it and ask — "What's my stand-up?", "What shipped in the last deploy?" — no more scraping five tabs.
-  - title: Verifiably local
-    details: An encrypted database on your machine, credentials in the OS keychain, and a built-in network monitor showing every outbound request Salience makes. You're the customer, not the product.
+  - title: Local, and checkable
+    details: Your graph lives in an encrypted database on your Mac, and credentials sit in that same encrypted store, unlocked by a key in the macOS Keychain. A built-in network monitor lists every outbound request the app makes, so you can audit it yourself.
 ---
 
-## Why Salience
-
-On a recent contract I worked as a one-man scrum team, drowning in tabs and
-windows: IDEs, terminals, Teams, Jira, Bitbucket, TeamCity, Docker, AWS,
-Sentry. Some tabs existed to repeat the same actions — run the tests, SSH into
-an instance, run a migration. The rest existed to answer questions whose
-answers lived across several tools at once: *Is my ticket in sync with my
-work? What's actually deployed right now?*
-
-Home Assistant showed me the fix. My car knows its fuel level, my calendar
-knows my next meeting, my house has smart lights — three silos. Home Assistant
-joins them: if the morning's meeting is further away than the remaining fuel
-will take me, the lights turn red. Information that already exists, brought to
-me instead of me going to find it — with enough time to act.
-
-Salience does that for developer tools. It doesn't replace any of them — it
-replaces the tabs, and the questions with **answers**. A red light at just the
-right time.
-
-[The full story →](/docs/about)
-
-## See it work
-
-<!-- GALLERY SLOT: zoomed-out map / world view (network altitude, once visually ready) -->
-
-**Home — every project, its checked-out branch, and what needs your attention**
-
-![Home: the Needs Attention feed across all projects, above per-project cards with branch state](/screenshots/home.png)
-
-**Your stack, on the map — compose services as buildings, lit by their running containers**
-
-![Docker Compose services rendered as buildings on the map, with the compose.yaml diff open](/screenshots/map-compose.png)
-
-**Select a file, see its diff — without leaving the map**
-
-![A selected file node with its diff in the map's detail panel](/screenshots/map-detail.png)
-
-**Code graph — pick a route, walk the calls, open anything in your IDE**
-
-![A route walked through the call graph, with source and callers in the context panel](/screenshots/code-graph.png)
-
-**Worktrees — every agent checkout, triaged: what matters, what's just eating disk**
-
-![The worktrees page with per-branch status phrases and disk sizes](/screenshots/worktrees.png)
-
-**My Work — everything in flight, grouped by what's wrong, worst first**
-
-![My Work: out-of-sync, stale, and in-progress sections with per-item chain state](/screenshots/my-work.png)
-
-**Suggested — change a test file and "run this test" appears, with its last result**
-
-![Suggested test and lint actions for the changed files, with pass/clean chips](/screenshots/build.png)
-
-**Command palette — every action, every entity, one keystroke away**
-
-![The command palette: actions, work, recipes, and map navigation in one list](/screenshots/command-palette.png)
-
-**Console — every run's result, its output, and a terminal, one keystroke away**
-
-![The console pane over the map: run history, a phpcs report, and a terminal](/screenshots/console-pane.png)
+*Free while Salience is in alpha. macOS 13+, Apple Silicon and Intel.*
 
 ## How it works
 
-Salience connects to your tools (git, GitHub, Bitbucket, Jira, Docker, AWS)
-and turns what it finds into **entities** — branches, PRs, tickets, CI runs,
-containers. Unlike a dashboard, these aren't fetched, shown once, and thrown
-away. Entities are typed, queryable and persisted as a correlated graph in an
-embedded database on your machine.
+1. **Salience reads the tools you already use.** Point it at a project and it
+   pulls in branches, PRs, tickets, CI runs and containers. Nothing is installed
+   into your codebase, and no connector ever writes back.
+2. **It connects the things that belong together.** This branch implements that
+   ticket; this container runs that image; the commit on this PR is what's
+   actually deployed. That join is the part no single tool can do for you.
+3. **It tells you when they disagree.** *PR merged, ticket still open.* *Branch
+   three days behind its base.* You find out while it's still cheap to fix,
+   without going looking.
 
-Every change streams out of the store as a live-query delta into a
-derivation engine. **Correlators** draw edges between entities from
-different sources — this branch implements that ticket, this container runs
-that image, this PR's commit is what's deployed. **Rules** then promote what the
-graph knows into **situations** — *"PR merged but the ticket is still open"* —
-each with a **loudness** that decides how hard it tugs at your attention at
-the current moment in time.
+[How that works underneath →](/docs/concepts)
 
-The map is just a lens over that graph.
+### Your agents read the same picture
 
-### Agents read the same graph
+Salience ships with an **MCP server** over the same joined data. Point an AI
+agent at it and ask in plain language — "What's my stand-up today?", "What
+shipped in the last deploy?" — instead of having it scrape five tools.
 
-Because the graph is the substrate, the same correlated context is open to
-your AI tools: Salience ships with an **MCP server**. Point your AI agent at
-it and ask in natural language: "What's my stand-up today?", "Can I unblock
-anyone?", "What work was on the last deployment?".
+## See it work
 
-[Read the docs →](/docs/) · [View on GitHub →](https://github.com/clegginabox/salience-macos)
+**Everything in flight, grouped by what's wrong with it**
+
+![My Work: out-of-sync, stale, and in-progress sections with per-item chain state](/screenshots/my-work.png)
+
+**Which code does this route actually touch?** Pick a route, walk the call graph, open anything in your IDE. *(PHP today.)*
+
+![A route walked through the call graph, with source and callers in the context panel](/screenshots/code-graph.png)
+
+**Every project at a glance, and what needs you first**
+
+![Home: the Needs Attention feed across all projects, above per-project cards with branch state](/screenshots/home.png)
+
+[See the rest in the gallery →](/gallery)
+
+## Why Salience
+
+Home Assistant joins your car, your calendar and your lights, so a meeting you
+can't reach on the fuel you have turns the lights red. Information that already
+exists, brought to you in time to act on it.
+
+Salience does that for developer tools. It doesn't replace any of them — it
+replaces the tabs, and the questions with **answers**.
+
+[The full story →](/docs/about)
+
+[Download the alpha →](/download) · [Read the docs →](/docs/) · [View on GitHub →](https://github.com/clegginabox/salience-macos)

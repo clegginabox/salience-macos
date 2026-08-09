@@ -2,7 +2,9 @@
 
 > The user is the customer, not the product.
 
-Salience runs on your machine. Your data stays on your machine. This page is an audit trail of that claim — what's stored where, what (if anything) leaves the device, and how to verify it with your own eyes.
+Salience runs on your machine, and the graph it builds stays there. There's no Salience server, no account, and no analytics pipeline.
+
+It does make outbound calls: to the tools you connect, and to Sentry while crash reporting is switched on. This page is the audit trail for both — what's stored where, what leaves the device, and how to verify each with your own eyes.
 
 ## Where your data lives
 

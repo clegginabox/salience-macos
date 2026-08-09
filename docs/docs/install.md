@@ -5,16 +5,16 @@ Salience is a macOS desktop app. It runs on Apple Silicon and Intel.
 ## Requirements
 
 - macOS 13 (Ventura) or newer
-- ~50 MB disk
+- Around 35 MB to download
 - A second monitor is recommended but not required — Salience is designed to be glanceable from across the room
 
 ## Download
 
-[**Download the latest release →**](https://github.com/clegginabox/salience-macos/releases/latest)
+[**Download Salience →**](/download) — pick the Apple Silicon or Intel build, with checksums.
 
 The download is a `.dmg`. Open it, drag Salience to your Applications folder, and launch it from Spotlight or Launchpad.
 
-> Pre-release status: Salience is shipping early to a small group of users. Expect rough edges; please report what you find on the [issues page](https://github.com/clegginabox/salience-macos/issues).
+> Pre-release status: Salience is in alpha and shipping early to a small group of users. It's free while it's in alpha; pricing comes later. Expect rough edges; please report what you find on the [issues page](https://github.com/clegginabox/salience-macos/issues).
 
 ## First launch
 
