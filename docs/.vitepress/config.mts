@@ -31,6 +31,7 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Gallery', link: '/gallery' },
       { text: 'Docs', link: '/docs/' },
+      { text: 'Download', link: '/download' },
     ],
 
     sidebar: {
