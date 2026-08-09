@@ -26,7 +26,7 @@ features:
   - title: Readable by your agents
     details: The same joined graph the map renders ships with an MCP server. Point your agent at it and ask — "What's my stand-up?", "What shipped in the last deploy?" — no more scraping five tabs.
   - title: Local, and checkable
-    details: Your graph lives in an encrypted database on your Mac, and credentials sit in that same encrypted store, unlocked by a key in the macOS Keychain. A built-in network monitor lists every outbound request the app makes, so you can audit it yourself.
+    details: Your graph stays on your Mac — no Salience cloud, no account. Credentials are kept apart from it, in an encrypted SQLite store unlocked by a key in the macOS Keychain. A built-in network monitor lists every outbound request the app makes, so you can audit it yourself.
 ---
 
 *Free while Salience is in alpha. macOS 13+, Apple Silicon and Intel.*

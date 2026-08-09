@@ -9,7 +9,7 @@ It does make outbound calls: to the tools you connect, and to Sentry while crash
 ## Where your data lives
 
 - **Credentials** (GitHub tokens, Jira tokens, etc.) — encrypted SQLite at `~/Library/Application Support/clegginabox.salience/`, using SQLCipher with a key stored in the macOS Keychain. Salience never transmits these.
-- **Entities** (branches, PRs, tickets, build status) — fetched from the tools you've connected and held in a local store at the same path. Salience never sends entity data off the machine.
+- **Entities** (branches, PRs, tickets, build status) — fetched from the tools you've connected and held in a separate local database at the same path. This one is **not** encrypted at rest: it holds the state your tools already show you, never tokens or secrets. If you want it encrypted on disk, FileVault covers it along with everything else on the volume. Salience never sends entity data off the machine.
 - **Preferences** — plain JSON at `~/.salience/preferences.json` (see [Configuration](/docs/configuration)).
 
 There is no Salience server. There is no cloud sync. There is no analytics pipeline.

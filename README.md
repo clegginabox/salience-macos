@@ -25,7 +25,7 @@ You glance at it. Your AI agents query it. There's no Salience cloud and no acco
 - **[Code Graph](https://clegginabox.github.io/salience-macos/docs/code-graph)** — your routes, like API docs — except each one opens the actual call graph. Pick a route, see the code it touches, ⌘-click into your IDE (PHP today).
 - **[MCP server](https://clegginabox.github.io/salience-macos/docs/mcp)** — point Claude, Codex or Cursor at the same joined graph. "What's my stand-up?" "Which worktrees can I delete?" No more scraping five tabs.
 - **[Command palette](https://clegginabox.github.io/salience-macos/docs/command-palette)** — ⌘K for every task, container, PR URL and map jump.
-- **[Private by design](https://clegginabox.github.io/salience-macos/docs/privacy)** — your graph lives in an encrypted database on your Mac, with credentials in that same encrypted store, unlocked by a key in the macOS Keychain. A built-in network monitor lists every outbound request the app makes, so you can audit it yourself.
+- **[Private by design](https://clegginabox.github.io/salience-macos/docs/privacy)** — your graph stays on your Mac, with no Salience cloud and no account. Credentials are kept apart from it, in an encrypted SQLite store unlocked by a key in the macOS Keychain. A built-in network monitor lists every outbound request the app makes, so you can audit it yourself.
 
 ![My Work: everything in flight, grouped by what's wrong, worst first](docs/public/screenshots/my-work.png)
 
