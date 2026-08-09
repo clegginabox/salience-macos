@@ -4,7 +4,7 @@ layout: home
 hero:
   name: Salience
   text: Know the state of your work without opening five tabs.
-  tagline: Salience connects GitHub, Jira, CI, Docker, AWS and Sentry into one live picture of your work. You glance at it. Your agents query it. There's no Salience cloud and no account — your graph stays on your Mac.
+  tagline: "Salience tells you what needs your attention across the tools you already use: GitHub, Jira, CI, Docker, AWS and Sentry. Your agents query the same picture. There's no Salience cloud and no account — your graph stays on your Mac."
   # Interim hero: desk altitude. Swap for a network-altitude shot (islands,
   # stations, agent presence) once that view is visually ready.
   image:

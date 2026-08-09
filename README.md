@@ -2,7 +2,7 @@
 
 **Know the state of your work without opening five tabs.**
 
-Salience is a macOS app that knows what you're working on. It connects to the tools you already use — GitHub, Jira, CI, Docker, AWS, Sentry — and joins what they know into one live picture: every branch, PR, ticket and build, what state it's in, and what needs you.
+Salience tells you what needs your attention across the tools you already use. It connects to GitHub, Jira, CI, Docker, AWS and Sentry, and joins what they know into one live picture: every branch, PR, ticket and build, what state it's in, and what needs you.
 
 You glance at it. Your AI agents query it. There's no Salience cloud and no account — your graph stays on your Mac.
 
