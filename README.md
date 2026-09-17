@@ -11,9 +11,9 @@ You glance at it. Your AI agents query it. There's no Salience cloud and no acco
 [**Download the alpha →**](https://clegginabox.github.io/salience-macos/download) · [**Documentation →**](https://clegginabox.github.io/salience-macos/docs/) · [**Gallery →**](https://clegginabox.github.io/salience-macos/gallery) · [**Discord →**](https://discord.gg/NErgbMHJr)
 
 
+<img width="2492" height="1440" alt="Screenshot 2026-09-17 at 13 49 41" src="https://github.com/user-attachments/assets/f6b3d2fb-82eb-4d5b-80be-3221d65e3360" />
 <img width="2471" height="1264" alt="Screenshot 2026-09-15 at 18 28 37" src="https://github.com/user-attachments/assets/dc8d68f7-f4f7-4a55-b3a4-6dc56610c08f" />
 <img width="2608" height="1440" alt="Screenshot 2026-09-15 at 19 07 31" src="https://github.com/user-attachments/assets/9681bbc1-dc63-495a-b55f-201cbe7367bb" />
-<img width="1755" height="1048" alt="Screenshot 2026-09-15 at 21 56 34" src="https://github.com/user-attachments/assets/02fe4c5f-1a9f-4786-abf0-e5d1cd819c7d" />
 <img width="2772" height="1374" alt="Screenshot 2026-09-15 at 19 35 30" src="https://github.com/user-attachments/assets/fe2a76d4-2303-4b17-a3e7-b6f5305e5322" />
 
 ## Features
