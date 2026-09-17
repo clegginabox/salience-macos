@@ -6,8 +6,6 @@ Salience tells you what needs your attention across the tools you already use. I
 
 You glance at it. Your AI agents query it. There's no Salience cloud and no account — your graph stays on your Mac.
 
-> **Alpha.** It's free while it's in alpha; pricing comes later.
-
 [**Download the alpha →**](https://clegginabox.github.io/salience-macos/download) · [**Documentation →**](https://clegginabox.github.io/salience-macos/docs/) · [**Gallery →**](https://clegginabox.github.io/salience-macos/gallery) · [**Discord →**](https://discord.gg/NErgbMHJr)
 
 
