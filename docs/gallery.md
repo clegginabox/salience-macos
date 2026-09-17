@@ -33,19 +33,19 @@ Every page is a tile grid you compose yourself. These are four of them.
 <div class="shot-grid">
   <figure>
     <img src="/screenshots/dashboard-kanban.png" alt="A dashboard with a units board, activity feed, review counters, resource tiles and a console">
-    <figcaption>A board view — units of work in columns (to do, in progress, in review, needs attention), with activity, review counts and a console alongside.</figcaption>
+    <figcaption>Units of work in a kanban board, with activity, review counts and a console alongside.</figcaption>
   </figure>
   <figure>
     <img src="/screenshots/dashboard-diff.png" alt="A dashboard with a pull request list, PR description and a diff viewer">
-    <figcaption>A review page — pull requests, the selected PR's description, and its diff against main with the changed-file tree.</figcaption>
+    <figcaption>Pull requests, the selected PR's description, and its diff against main with the changed-file tree.</figcaption>
   </figure>
   <figure>
     <img src="/screenshots/dashboard-docker.png" alt="A dashboard with units, PR overview, sync status, Docker containers and docker logs">
-    <figcaption>A runtime page — Docker containers with restart and stop controls, live compose logs, sync status and a PR overview.</figcaption>
+    <figcaption>Docker containers with restart and stop controls, live compose logs, sync status and a PR overview.</figcaption>
   </figure>
   <figure>
     <img src="/screenshots/dashboard-codex.png" alt="A dashboard with a ticket list and ticket detail, and an agent session in the sidebar">
-    <figcaption>A tickets page — the selected ticket's description and acceptance criteria, with a Codex session in the sidebar ready to work on it.</figcaption>
+    <figcaption>The selected ticket's description and acceptance criteria, with a Codex session in the sidebar ready to work on it.</figcaption>
   </figure>
   <figure>
     <img src="/screenshots/dashboard-templates.png" alt="The new page picker with Blank page and Dashboard templates">
@@ -53,7 +53,7 @@ Every page is a tile grid you compose yourself. These are four of them.
   </figure>
   <figure>
     <img src="/screenshots/tile-list.png" alt="The Add tiles dialog listing tiles by category">
-    <figcaption>Add tiles — 43 tiles across overview, git and worktrees, reviews and tickets, build and runtime, agents, and app connections.</figcaption>
+    <figcaption>43 tiles across overview, git and worktrees, reviews and tickets, build and runtime, agents, and app connections.</figcaption>
   </figure>
 </div>
 

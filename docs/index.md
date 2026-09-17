@@ -6,8 +6,8 @@ hero:
   text: Know the state of your work without opening five tabs.
   tagline: "Salience tells you what needs your attention across the tools you already use: GitHub, Jira, CI, Docker, AWS and Sentry. Your agents query the same picture. There's no Salience cloud and no account — your graph stays on your Mac."
   image:
-    src: /screenshots/dashboard-kanban.png
-    alt: A Salience dashboard — units of work by state, activity, review counts and a console
+    src: /screenshots/hero.png
+    alt: A Salience dashboard
   actions:
     - theme: brand
       text: Download the alpha
