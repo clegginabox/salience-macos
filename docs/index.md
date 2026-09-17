@@ -5,11 +5,9 @@ hero:
   name: Salience
   text: Know the state of your work without opening five tabs.
   tagline: "Salience tells you what needs your attention across the tools you already use: GitHub, Jira, CI, Docker, AWS and Sentry. Your agents query the same picture. There's no Salience cloud and no account — your graph stays on your Mac."
-  # Interim hero: desk altitude. Swap for a network-altitude shot (islands,
-  # stations, agent presence) once that view is visually ready.
   image:
-    src: /screenshots/map-desk.png
-    alt: The Salience map — the working set as file nodes with typed edges between them
+    src: /screenshots/dashboard-kanban.png
+    alt: A Salience dashboard — units of work by state, activity, review counts and a console
   actions:
     - theme: brand
       text: Download the alpha
@@ -19,12 +17,12 @@ hero:
       link: /docs/
 
 features:
-  - title: A living map, not a dashboard
-    details: Your branches, PRs, tickets and CI laid out as places, not rows. Positions stay stable, so you always know where to look — and you can watch your AI agents move as they work.
+  - title: Pages you compose
+    details: Every page is a grid of tiles — units of work, PRs, diffs, tickets, containers, logs, a console. Lay out what you need per project and it stays that way.
   - title: Calm by default
     details: No inbox, no notifications, no modals. Salience promotes what matters into situations, each with a loudness that matches how urgently it needs you.
   - title: Readable by your agents
-    details: The same joined graph the map renders ships with an MCP server. Point your agent at it and ask — "What's my stand-up?", "What shipped in the last deploy?" — no more scraping five tabs.
+    details: The same joined graph the dashboards render ships with an MCP server. Point your agent at it and ask — "What's my stand-up?", "What shipped in the last deploy?" — no more scraping five tabs.
   - title: Local, and checkable
     details: Your graph stays on your Mac — no Salience cloud, no account. Credentials are kept apart from it, in an encrypted SQLite store unlocked by a key in the macOS Keychain. A built-in network monitor lists every outbound request the app makes, so you can audit it yourself.
 ---
@@ -53,17 +51,17 @@ shipped in the last deploy?" — instead of having it scrape five tools.
 
 ## See it work
 
-**Everything in flight, grouped by what's wrong with it**
+**A branch, its PR, its ticket and its CI — as one thing**
 
-![My Work: out-of-sync, stale, and in-progress sections with per-item chain state](/screenshots/my-work.png)
+![A unit of work: linked branch, PR and failing CI checks, with logs one click away](/screenshots/unit-view.png)
 
 **Which code does this route actually touch?** Pick a route, walk the call graph, open anything in your IDE. *(PHP today.)*
 
-![A route walked through the call graph, with source and callers in the context panel](/screenshots/code-graph.png)
+![A route walked through the call graph, with source and callers in the inspector](/screenshots/code-graph-route.png)
 
-**Every project at a glance, and what needs you first**
+**Your stack, its logs and your PRs on one page**
 
-![Home: the Needs Attention feed across all projects, above per-project cards with branch state](/screenshots/home.png)
+![A dashboard with units, PR overview, sync status, Docker containers and compose logs](/screenshots/dashboard-docker.png)
 
 [See the rest in the gallery →](/gallery)
 

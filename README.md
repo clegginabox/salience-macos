@@ -18,20 +18,16 @@ You glance at it. Your AI agents query it. There's no Salience cloud and no acco
 
 ## Features
 
-- **My Work** — everything you have in flight — branch, PR, ticket, CI — joined into one list, worst first. Includes the state no single tool can show you: PR merged but the ticket still open.
-- **Stand-up** — the ticket board with branches and PRs joined on. Read your update straight off the screen.
-- **Worktrees** — clean up after your AI agents. Every checkout with its PR state, uncommitted changes and disk size — and a verdict on which are safe to reclaim.
-- **The Map** — your changed files as a map you arrange yourself, Compose services as buildings lit by their containers, and your agents moving as they work. Sentry stack traces draw directly over your working copy.
+- **Units of work** — a branch, its PR, its ticket and its CI joined into one thing, grouped by state, worst first. Includes what no single tool can show you: PR merged but the ticket still open.
+- **Dashboards** — every page is a grid of tiles you compose per project: a units board, PR descriptions, diffs, tickets, containers, logs, a console.
 - **Suggested actions** — change a test file and "run this test" appears, with the exact command — host or container. Results stay on the row.
 - **Checks** — one-click `composer audit`, PHPStan, Psalm, schema validation. Verdicts are cached, so you can always see what they said last time.
 - **Stack** — your Docker Compose services with live health state. Start, stop, restart, tail logs.
-- **Review** — your branch's diff against the right base, before you push. Double-click any file to open it in your editor.
+- **Diffs** — a PR's changes against its base, file by file, without leaving the app.
 - **[Code Graph](https://clegginabox.github.io/salience-macos/docs/code-graph)** — your routes, like API docs — except each one opens the actual call graph. Pick a route, see the code it touches, ⌘-click into your IDE (PHP today).
 - **[MCP server](https://clegginabox.github.io/salience-macos/docs/mcp)** — point Claude, Codex or Cursor at the same joined graph. "What's my stand-up?" "Which worktrees can I delete?" No more scraping five tabs.
-- **Command palette** — ⌘K for every task, container, PR URL and map jump.
+- **Command palette** — ⌘K for every ticket, PR, task and container.
 - **[Private by design](https://clegginabox.github.io/salience-macos/docs/privacy)** — your graph stays on your Mac, with no Salience cloud and no account. Credentials are kept apart from it, in an encrypted SQLite store unlocked by a key in the macOS Keychain. A built-in network monitor lists every outbound request the app makes, so you can audit it yourself.
-
-![My Work: everything in flight, grouped by what's wrong, worst first](docs/public/screenshots/my-work.png)
 
 **Works with:** GitHub (PRs, reviews, CI, issues) · Jira · AWS (ECR/ECS) · Sentry · Docker Compose — [connect your tools →](https://clegginabox.github.io/salience-macos/docs/connect-your-tools)
 

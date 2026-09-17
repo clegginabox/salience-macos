@@ -4,9 +4,9 @@ Salience indexes your project's symbols and the relationships between them, then
 
 **PHP is the only language indexed today.** Everything on this page — the graph, the route walk, and the [code-graph MCP tools](/docs/mcp#code-graph-php-only) — is PHP-only. The data model isn't PHP-specific, but nothing else populates it yet.
 
-Find it at **Dev Tools → Code Graph** in the project sidebar.
+Find it under **Code Graph** in the project sidebar.
 
-![The Code Graph page: routes navigator, a walked route rendered as a file map, and the context panel](/screenshots/code-graph.png)
+![The Code Graph page: routes list, a walked route rendered as a call graph, and the inspector with source](/screenshots/code-graph-route.png)
 
 ## Prerequisites
 
@@ -15,7 +15,7 @@ Find it at **Dev Tools → Code Graph** in the project sidebar.
 | A PHP project added to Salience | The producer only scans PHP. |
 | A `composer.json` with an `autoload` block | Its PSR-4 / PSR-0 / classmap directories are the source roots that get scanned. Without one, Salience falls back to the conventional `src` and `app`. |
 | For route sync: Symfony or Laravel | `bin/console` plus `symfony/framework-bundle`, or `artisan` plus `laravel/framework`. |
-| For route sync: a resolvable PHP runtime | Either a local `php` binary or a Docker Compose service — Salience runs the command the same way the Build page does. |
+| For route sync: a resolvable PHP runtime | Either a local `php` binary or a Docker Compose service — Salience runs the command the same way it runs your test cues. |
 
 `vendor/` is never scanned. Third-party code shows up in the graph only as unresolved boundary nodes where your code touches it.
 
@@ -55,7 +55,7 @@ The result is rolled up to **file granularity**: one node per file, carrying onl
 
 ## Inspecting a node
 
-**Click** a node to open it in the context panel on the right:
+**Click** a node to open it in the inspector on the right:
 
 - the walked methods in that file, each with a source snippet read live from disk
 - **CALLS** and **CALLED BY** — the walk-local neighbours, sliced from the map already loaded, no extra query

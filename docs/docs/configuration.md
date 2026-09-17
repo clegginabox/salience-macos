@@ -71,7 +71,7 @@ How it works:
 
 Because the fingerprint covers `id` and `exec` only, editing a `title`, `keywords`, or `category` won't re-prompt you — trust is about what would actually run, not what the menu looks like. Reordering `[[task]]` blocks doesn't re-prompt either.
 
-The file watcher picks up every `salience.toml` change, so edits are re-parsed and re-evaluated within seconds of saving. Trusted tasks appear in the command palette and on the Build page.
+The file watcher picks up every `salience.toml` change, so edits are re-parsed and re-evaluated within seconds of saving. Trusted tasks appear in the command palette.
 
 ## Per-user: recipes
 
