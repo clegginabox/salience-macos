@@ -29,6 +29,8 @@ You glance at it. Your AI agents query it. There's no Salience cloud and no acco
 - **Command palette** — ⌘K for every ticket, PR, task and container.
 - **[Private by design](https://clegginabox.github.io/salience-macos/docs/privacy)** — your graph stays on your Mac, with no Salience cloud and no account. Credentials are kept apart from it, in an encrypted SQLite store unlocked by a key in the macOS Keychain. A built-in network monitor lists every outbound request the app makes, so you can audit it yourself.
 
+<img width="2082" height="1178" alt="Screenshot 2026-09-17 at 08 12 21" src="https://github.com/user-attachments/assets/6df535c1-0bea-4327-818d-ef5566c3a949" />
+
 **Works with:** GitHub (PRs, reviews, CI, issues) · Jira · AWS (ECR/ECS) · Sentry · Docker Compose — [connect your tools →](https://clegginabox.github.io/salience-macos/docs/connect-your-tools)
 
 ## Writing PHP? Start here
