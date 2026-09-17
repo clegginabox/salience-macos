@@ -8,7 +8,6 @@ Start with **Install** if you're new, or jump straight to **Code Graph**, **MCP 
 
 - **[Install →](/docs/install)** — download, system requirements, first launch
 - **[First run →](/docs/getting-started)** — add a project, connect a tool, see your entities fill in
-- **[Salience for PHP →](/docs/php)** — the PHP tour: test cues, one-click checks, Symfony/Laravel routes, the code graph
 - **[Connect your tools →](/docs/connect-your-tools)** — GitHub, Jira, AWS, Sentry, Docker
 - **[MCP server →](/docs/mcp)** — point Claude, Codex, or Cursor at Salience
 - **[Privacy & security →](/docs/privacy)** — where your data lives, what gets sent off-machine

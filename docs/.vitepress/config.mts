@@ -41,7 +41,6 @@ export default defineConfig({
           items: [
             { text: 'Install', link: '/docs/install' },
             { text: 'First run', link: '/docs/getting-started' },
-            { text: 'Salience for PHP', link: '/docs/php' },
           ],
         },
         {

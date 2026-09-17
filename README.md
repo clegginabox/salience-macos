@@ -35,7 +35,7 @@ You glance at it. Your AI agents query it. There's no Salience cloud and no acco
 
 Salience works with any git repository, but it goes deepest on PHP today. It reads your `composer.json`, cues PHPUnit, Pest and PHPCS runs for the files you changed, one-clicks PHPStan, Psalm and `composer audit`, syncs your Symfony or Laravel routes, and answers a question grep can't: *what code does this route actually touch?* — in the app, and for your agents over MCP.
 
-[Salience for PHP →](https://clegginabox.github.io/salience-macos/docs/php)
+[Code Graph →](https://clegginabox.github.io/salience-macos/docs/code-graph)
 
 ## Why
 
