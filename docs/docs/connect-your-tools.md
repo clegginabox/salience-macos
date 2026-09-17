@@ -157,7 +157,7 @@ The token and organization are stored once per install — one Sentry org per Sa
 3. **Connect.**
 4. In the **Sentry projects** card, toggle on the projects this Salience project should track. Only picked projects have their unresolved issues fetched; nothing else in the organization is scanned.
 
-Issues for scoped projects show up on the Timeline and Overview, and error paths render on the [map](/docs/map).
+Issues for scoped projects show up on the Timeline and Overview, and error paths render on the map.
 
 ## Docker / Compose
 
@@ -172,9 +172,9 @@ Composes in subdirectories (`packages/api/compose.yml`) and override files aren'
 
 Once detected, compose services show up in three places:
 
-- The **Stack** tab on the [Build page](/docs/build) — one row per container with its state, health, and first port, plus per-service and whole-stack controls
-- The [command palette](/docs/command-palette), under **Containers** — stack up/down, and start, stop, restart, or tail logs for an individual service. These stream into the console pane.
-- The [map](/docs/map), where each declared service is a building whose power state comes from the matched running container. The right-click command wheel there copies `docker compose` commands to your clipboard rather than running them.
+- The **Stack** tab on the Build page — one row per container with its state, health, and first port, plus per-service and whole-stack controls
+- The command palette, under **Containers** — stack up/down, and start, stop, restart, or tail logs for an individual service. These stream into the console pane.
+- The map, where each declared service is a building whose power state comes from the matched running container. The right-click command wheel there copies `docker compose` commands to your clipboard rather than running them.
 
 ## Bitbucket
 

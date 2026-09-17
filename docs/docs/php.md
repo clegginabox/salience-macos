@@ -2,17 +2,17 @@
 
 Salience works with any git repository — but it understands PHP projects best. If your day is Symfony or Laravel, Composer and PHPUnit, this is the five-minute tour of what it does for you specifically.
 
-Everything here sits on top of the core app: [My Work](/docs/my-work), [the Map](/docs/map), [worktree cleanup](/docs/worktrees) and the [MCP server](/docs/mcp) are language-agnostic and work the same for every project.
+Everything here sits on top of the core app: My Work, the Map, worktree cleanup and the [MCP server](/docs/mcp) are language-agnostic and work the same for every project.
 
 ## The right tests, cued by your changes
 
-Change a file and the [Build page](/docs/build) cues the runners it detected — PHPUnit, Pest, PHPCS — scoped to what you touched. Each cue prints the exact command it would run, including the `docker compose exec` prefix when your PHP runtime lives in a container rather than on your host. Hit Run, the output streams into the console, and the result stays on the row as a chip (`763 passed · 1 skipped`).
+Change a file and the Build page cues the runners it detected — PHPUnit, Pest, PHPCS — scoped to what you touched. Each cue prints the exact command it would run, including the `docker compose exec` prefix when your PHP runtime lives in a container rather than on your host. Hit Run, the output streams into the console, and the result stays on the row as a chip (`763 passed · 1 skipped`).
 
 ![Suggested test and lint actions for the changed files, with pass/clean chips](/screenshots/build.png)
 
 ## One-click health checks
 
-Seven checks ship today, and every one of them is PHP ([Build → Checks](/docs/build#checks)):
+Seven checks ship today, and every one of them is PHP (Build → Checks):
 
 | Check | Tool |
 |-------|------|
@@ -44,7 +44,7 @@ The Build page grows a PHP tab when something is off with the runtime itself: an
 
 ## Symfony & Composer recipes
 
-The [command palette](/docs/command-palette) carries recipes for the tools it detects — Symfony console commands and Composer actions, ready to run with ⌘K.
+The command palette carries recipes for the tools it detects — Symfony console commands and Composer actions, ready to run with ⌘K.
 
 ## Your agent speaks PHP too
 

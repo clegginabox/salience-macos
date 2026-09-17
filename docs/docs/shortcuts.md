@@ -1,18 +1,18 @@
 # Keyboard shortcuts
 
-Every shortcut in Salience, in one place. The keys worth memorising are **⌘K** for the [command palette](/docs/command-palette), **⌘J** for the [console pane](/docs/build#the-console-pane), and **⌘B** for the sidebar — the app's only global bindings. Everything else below belongs to the surface it's listed under.
+Every shortcut in Salience, in one place. The keys worth memorising are **⌘K** for the command palette, **⌘J** for the console pane, and **⌘B** for the sidebar — the app's only global bindings. Everything else below belongs to the surface it's listed under.
 
 ## Everywhere
 
 | Key | Action |
 |-----|--------|
-| ⌘K (or Ctrl+K) | Toggle the [command palette](/docs/command-palette) |
-| ⌘J | Toggle the [console pane](/docs/build#the-console-pane) |
+| ⌘K (or Ctrl+K) | Toggle the command palette |
+| ⌘J | Toggle the console pane |
 | ⌘B | Toggle the sidebar |
 
 ## The HUD
 
-The [HUD](/docs/command-palette#the-hud) sits above every page; each pill opens its popover with its own key. Only one popover is open at a time.
+The HUD sits above every page; each pill opens its popover with its own key. Only one popover is open at a time.
 
 | Key | Pill |
 |-----|------|
@@ -40,7 +40,7 @@ Open it with ⌘S, or by clicking the branch in the HUD.
 
 | Key | Action |
 |-----|--------|
-| ↑ / ↓ | Move the highlight — the HUD [shadow-previews](/docs/command-palette#branch-switcher) that branch's ticket, PR and CI; nothing is checked out |
+| ↑ / ↓ | Move the highlight — the HUD shadow-previews that branch's ticket, PR and CI; nothing is checked out |
 | Enter | Check out the highlighted branch |
 | Esc | Close and snap back to the real branch |
 

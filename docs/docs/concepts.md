@@ -1,6 +1,6 @@
 # Entities, correlations & situations
 
-Every view in Salience — [the map](/docs/map), [My Work & Stand-up](/docs/my-work), the notifications feed — is a lens over the same four-step model. Understanding it takes five minutes and explains everything you'll see.
+Every view in Salience — the map, My Work & Stand-up, the notifications feed — is a lens over the same four-step model. Understanding it takes five minutes and explains everything you'll see.
 
 ## The four steps
 
@@ -84,8 +84,8 @@ The practical consequence: you can leave Salience on a second monitor all day. I
 ## Where to see it
 
 - **The notifications feed** is every situation across every project, filterable by loudness. It's the flat view of what the rules decided.
-- **[The map](/docs/map)** places the same situations spatially — attention markers at the edge point toward the branch that needs you. Whichever branch you're currently on never gets a marker; you're already there.
-- **[My Work & Stand-up](/docs/my-work)** reads the materialised units of work, which is why it can group your week by state rather than by ticket number.
+- **The map** places the same situations spatially — attention markers at the edge point toward the branch that needs you. Whichever branch you're currently on never gets a marker; you're already there.
+- **My Work & Stand-up** reads the materialised units of work, which is why it can group your week by state rather than by ticket number.
 - **[The MCP server](/docs/mcp)** exposes the same entities, edges and situations to your AI agent. When you ask "what's my stand-up?", it's reading this graph — not scraping five tabs.
 
 Everything here is derived locally, from data already on your machine or already in your tools. See [Privacy & security](/docs/privacy) for where it lives.

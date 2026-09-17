@@ -47,14 +47,7 @@ export default defineConfig({
         {
           text: 'Guide',
           items: [
-            { text: 'The Map', link: '/docs/map' },
-            { text: 'My Work & Stand-up', link: '/docs/my-work' },
-            { text: 'Build & run', link: '/docs/build' },
-            { text: 'Review', link: '/docs/review' },
             { text: 'Code Graph', link: '/docs/code-graph' },
-            { text: 'Command palette & HUD', link: '/docs/command-palette' },
-            { text: 'Dashboard, Timeline & Explore', link: '/docs/views' },
-            { text: 'Worktrees', link: '/docs/worktrees' },
           ],
         },
         {

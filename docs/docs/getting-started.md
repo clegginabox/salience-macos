@@ -32,7 +32,6 @@ If anything looks empty, give it 30 seconds — the GitHub sync runs every 5 min
 
 ## Next
 
-- **[The Map →](/docs/map)** — the spatial view your work lives on
 - **[Connect your tools →](/docs/connect-your-tools)** — full list of supported integrations
 - **[MCP server →](/docs/mcp)** — expose this same context to your AI agent
 - **[Privacy & security →](/docs/privacy)** — where your data lives
