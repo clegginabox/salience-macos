@@ -18,17 +18,15 @@ You glance at it. Your AI agents query it. There's no Salience cloud and no acco
 
 ## Features
 
-- **[My Work](https://clegginabox.github.io/salience-macos/docs/my-work)** — everything you have in flight — branch, PR, ticket, CI — joined into one list, worst first. Includes the state no single tool can show you: PR merged but the ticket still open.
-- **[Stand-up](https://clegginabox.github.io/salience-macos/docs/my-work#stand-up)** — the ticket board with branches and PRs joined on. Read your update straight off the screen.
-- **[Worktrees](https://clegginabox.github.io/salience-macos/docs/worktrees)** — clean up after your AI agents. Every checkout with its PR state, uncommitted changes and disk size — and a verdict on which are safe to reclaim.
-- **[The Map](https://clegginabox.github.io/salience-macos/docs/map)** — your changed files as a map you arrange yourself, Compose services as buildings lit by their containers, and your agents moving as they work. Sentry stack traces draw directly over your working copy.
-- **[Suggested actions](https://clegginabox.github.io/salience-macos/docs/build)** — change a test file and "run this test" appears, with the exact command — host or container. Results stay on the row.
-- **[Checks](https://clegginabox.github.io/salience-macos/docs/build#checks)** — one-click `composer audit`, PHPStan, Psalm, schema validation. Verdicts are cached, so you can always see what they said last time.
-- **[Stack](https://clegginabox.github.io/salience-macos/docs/build#stack)** — your Docker Compose services with live health state. Start, stop, restart, tail logs.
-- **[Review](https://clegginabox.github.io/salience-macos/docs/review)** — your branch's diff against the right base, before you push. Double-click any file to open it in your editor.
+- **Units of work** — a branch, its PR, its ticket and its CI joined into one thing, grouped by state, worst first. Includes what no single tool can show you: PR merged but the ticket still open.
+- **Dashboards** — every page is a grid of tiles you compose per project: a units board, PR descriptions, diffs, tickets, containers, logs, a console.
+- **Suggested actions** — change a test file and "run this test" appears, with the exact command — host or container. Results stay on the row.
+- **Checks** — one-click `composer audit`, PHPStan, Psalm, schema validation. Verdicts are cached, so you can always see what they said last time.
+- **Stack** — your Docker Compose services with live health state. Start, stop, restart, tail logs.
+- **Diffs** — a PR's changes against its base, file by file, without leaving the app.
 - **[Code Graph](https://clegginabox.github.io/salience-macos/docs/code-graph)** — your routes, like API docs — except each one opens the actual call graph. Pick a route, see the code it touches, ⌘-click into your IDE (PHP today).
 - **[MCP server](https://clegginabox.github.io/salience-macos/docs/mcp)** — point Claude, Codex or Cursor at the same joined graph. "What's my stand-up?" "Which worktrees can I delete?" No more scraping five tabs.
-- **[Command palette](https://clegginabox.github.io/salience-macos/docs/command-palette)** — ⌘K for every task, container, PR URL and map jump.
+- **Command palette** — ⌘K for every ticket, PR, task and container.
 - **[Private by design](https://clegginabox.github.io/salience-macos/docs/privacy)** — your graph stays on your Mac, with no Salience cloud and no account. Credentials are kept apart from it, in an encrypted SQLite store unlocked by a key in the macOS Keychain. A built-in network monitor lists every outbound request the app makes, so you can audit it yourself.
 
 <img width="2082" height="1178" alt="Screenshot 2026-09-17 at 08 12 21" src="https://github.com/user-attachments/assets/6df535c1-0bea-4327-818d-ef5566c3a949" />
@@ -39,7 +37,7 @@ You glance at it. Your AI agents query it. There's no Salience cloud and no acco
 
 Salience works with any git repository, but it goes deepest on PHP today. It reads your `composer.json`, cues PHPUnit, Pest and PHPCS runs for the files you changed, one-clicks PHPStan, Psalm and `composer audit`, syncs your Symfony or Laravel routes, and answers a question grep can't: *what code does this route actually touch?* — in the app, and for your agents over MCP.
 
-[Salience for PHP →](https://clegginabox.github.io/salience-macos/docs/php)
+[Code Graph →](https://clegginabox.github.io/salience-macos/docs/code-graph)
 
 ## Why
 

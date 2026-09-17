@@ -1,6 +1,6 @@
 # Entities, correlations & situations
 
-Every view in Salience — [the map](/docs/map), [My Work & Stand-up](/docs/my-work), the notifications feed — is a lens over the same four-step model. Understanding it takes five minutes and explains everything you'll see.
+Every view in Salience — units, dashboards, the notifications feed — is a lens over the same four-step model. Understanding it takes five minutes and explains everything you'll see.
 
 ## The four steps
 
@@ -15,7 +15,7 @@ Nothing in Salience shouts unless step 4 decided it deserved to.
 
 An entity is a typed, addressed record of something real: `git.branch`, `vcs.pull_request`, `ticket`, `ci.run`, `ci.commit_status`, `docker.container`, `aws.ecr.image`, `aws.ecs.task`, `route`, `sentry.issue`, and around thirty more — plus the derived ones Salience computes itself (`unit.work`, `situation`, `pr.involvement`).
 
-Two things follow from that, and they're the reason Salience isn't a dashboard:
+Two things follow from that, and they're the reason Salience isn't a status page:
 
 - **Entities persist.** They live in an embedded database on your machine, not in a fetch-and-forget render loop. Yesterday's PR is still there.
 - **Entities stream.** When a sync updates one, the change flows straight to the UI as a delta. You don't refresh anything.
@@ -42,7 +42,7 @@ A correlator is a small piece of logic that looks at two entity types and draws 
 
 Individually these are unremarkable. Chained, they're the point.
 
-**Branch → PR → ticket.** The chain that makes a piece of work one thing rather than three browser tabs. It's what powers the unit of work Salience builds for every branch, and what lets Stand-up group your week by what needs you instead of by ticket ID.
+**Branch → PR → ticket.** The chain that makes a piece of work one thing rather than three browser tabs. It's what powers the unit of work Salience builds for every branch, and what lets the units board group your work by what needs you instead of by ticket ID.
 
 **PR → CI run → ECR image → task definition → running ECS task.** The chain that answers *what's actually deployed right now* — walk from a running container back to the commit, or from a merged PR forward to whether it's live. No single tool in that chain can answer it.
 
@@ -59,8 +59,7 @@ Rules read the correlated graph and derive new entities from it. Some produce ra
 | Review situations | *Needs my review* and *needs my re-look* — the reviewer side |
 | PR author situations | One situation per author-facing condition: changes requested, CI failed, merge conflicts, unresolved threads awaiting your reply, and ready-to-merge |
 | Drift situations | Cross-source hygiene — PR merged but the ticket is still open, ticket Done but the PR isn't, branch exists but the ticket never moved, ticket with no branch or PR at all |
-| Unit of work | Materialises branch ∪ PR ∪ ticket ∪ CI as a single `unit.work` entity — what the HUD, My Work, Stand-up and map all read |
-| Attention markers | Resolves each situation back to a branch and places it as an edge-of-map marker |
+| Unit of work | Materialises branch ∪ PR ∪ ticket ∪ CI as a single `unit.work` entity — what the Units views and dashboard tiles read |
 | CI expectation | Tracks commits whose CI hasn't settled, so polling follows real work rather than a fixed timer |
 
 A situation carries four things: a **kind** (`work_item`, `review_gate`, `check`, `build_status`, `hygiene`), a **loudness**, a plain-English **reason** — *"PR #412 merged but LW-508 is still 'In Progress' — move it to Done"* — and at most one **primary action**.
@@ -84,8 +83,7 @@ The practical consequence: you can leave Salience on a second monitor all day. I
 ## Where to see it
 
 - **The notifications feed** is every situation across every project, filterable by loudness. It's the flat view of what the rules decided.
-- **[The map](/docs/map)** places the same situations spatially — attention markers at the edge point toward the branch that needs you. Whichever branch you're currently on never gets a marker; you're already there.
-- **[My Work & Stand-up](/docs/my-work)** reads the materialised units of work, which is why it can group your week by state rather than by ticket number.
+- **Units** reads the materialised units of work, which is why the board can group your work by state — in review, needs attention — rather than by ticket number.
 - **[The MCP server](/docs/mcp)** exposes the same entities, edges and situations to your AI agent. When you ask "what's my stand-up?", it's reading this graph — not scraping five tabs.
 
 Everything here is derived locally, from data already on your machine or already in your tools. See [Privacy & security](/docs/privacy) for where it lives.
