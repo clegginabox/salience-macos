@@ -1,5 +1,7 @@
 # Gallery
 
+A tour of Salience in screenshots. Click any image to zoom.
+
 <style>
 .shot-grid {
   display: grid;
@@ -25,6 +27,8 @@
 </style>
 
 ## Dashboards
+
+Every page is a tile grid you compose yourself. These are four of them.
 
 <div class="shot-grid">
   <figure>
