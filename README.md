@@ -1,58 +1,60 @@
 # Salience
 
-**Know the state of your work without opening five tabs.**
+**Home Assistant for developer tools.**
 
-Salience tells you what needs your attention across the tools you already use. It connects to GitHub, Jira, CI, Docker, AWS and Sentry, and joins what they know into one live picture: every branch, PR, ticket and build, what state it's in, and what needs you.
+Salience is a macOS and Linux app that brings together your branches, tickets, pull requests, builds and local environment. It connects related work and lets you arrange it into pages of tiles.
 
-You glance at it. Your AI agents query it. There's no Salience cloud and no account — your graph stays on your Mac.
+Keep it visible for a quiet overview, explore the details when you need them, or give your agent access to the same context.
 
-> **Alpha.** It's free while it's in alpha; pricing comes later.
+> Salience is in alpha and free to use during alpha. Expect rough edges.
 
-[**Download the alpha →**](https://clegginabox.github.io/salience-macos/download) · [**Documentation →**](https://clegginabox.github.io/salience-macos/docs/) · [**Gallery →**](https://clegginabox.github.io/salience-macos/gallery) · [**Discord →**](https://discord.gg/NErgbMHJr)
+## Start here
 
+- **[Get started](https://clegginabox.github.io/salience-macos/docs/install)** — install Salience, add a project and connect your first tool.
+- **[Concepts and terminology](https://clegginabox.github.io/salience-macos/docs/concepts)** — understand entities, correlations, units of work, situations, tiles and pages through a worked example.
+- **[Connect your tools](https://clegginabox.github.io/salience-macos/docs/connect-your-tools)** — bring in information from the tools you use.
 
-<img width="2471" height="1264" alt="Screenshot 2026-09-15 at 18 28 37" src="https://github.com/user-attachments/assets/dc8d68f7-f4f7-4a55-b3a4-6dc56610c08f" />
-<img width="2608" height="1440" alt="Screenshot 2026-09-15 at 19 07 31" src="https://github.com/user-attachments/assets/9681bbc1-dc63-495a-b55f-201cbe7367bb" />
-<img width="1755" height="1048" alt="Screenshot 2026-09-15 at 21 56 34" src="https://github.com/user-attachments/assets/02fe4c5f-1a9f-4786-abf0-e5d1cd819c7d" />
-<img width="2772" height="1374" alt="Screenshot 2026-09-15 at 19 35 30" src="https://github.com/user-attachments/assets/fe2a76d4-2303-4b17-a3e7-b6f5305e5322" />
+[Downloads](https://clegginabox.github.io/salience-macos/download) · [Releases](https://github.com/clegginabox/salience-macos/releases) · [All documentation](https://clegginabox.github.io/salience-macos/docs/)
 
-## Features
+## One piece of work, across several tools
 
-- **Units of work** — a branch, its PR, its ticket and its CI joined into one thing, grouped by state, worst first. Includes what no single tool can show you: PR merged but the ticket still open.
-- **Dashboards** — every page is a grid of tiles you compose per project: a units board, PR descriptions, diffs, tickets, containers, logs, a console.
-- **Suggested actions** — change a test file and "run this test" appears, with the exact command — host or container. Results stay on the row.
-- **Checks** — one-click `composer audit`, PHPStan, Psalm, schema validation. Verdicts are cached, so you can always see what they said last time.
-- **Stack** — your Docker Compose services with live health state. Start, stop, restart, tail logs.
-- **Diffs** — a PR's changes against its base, file by file, without leaving the app.
-- **[Code Graph](https://clegginabox.github.io/salience-macos/docs/code-graph)** — your routes, like API docs — except each one opens the actual call graph. Pick a route, see the code it touches, ⌘-click into your IDE (PHP today).
-- **[MCP server](https://clegginabox.github.io/salience-macos/docs/mcp)** — point Claude, Codex or Cursor at the same joined graph. "What's my stand-up?" "Which worktrees can I delete?" No more scraping five tabs.
-- **Command palette** — ⌘K for every ticket, PR, task and container.
-- **[Private by design](https://clegginabox.github.io/salience-macos/docs/privacy)** — your graph stays on your Mac, with no Salience cloud and no account. Credentials are kept apart from it, in an encrypted SQLite store unlocked by a key in the macOS Keychain. A built-in network monitor lists every outbound request the app makes, so you can audit it yourself.
+![Salience on macOS showing the Docker setup unit, its pull request, passing checks and related activity](docs/public/concepts/concepts-unit-of-work.png)
 
-<img width="2082" height="1178" alt="Screenshot 2026-09-17 at 08 12 21" src="https://github.com/user-attachments/assets/6df535c1-0bea-4327-818d-ef5566c3a949" />
+The Docker setup ticket, its branch, pull request and build checks, brought together in Salience. The page combines a units list, activity and status tiles around the same work.
 
-**Works with:** GitHub (PRs, reviews, CI, issues) · Jira · AWS (ECR/ECS) · Sentry · Docker Compose — [connect your tools →](https://clegginabox.github.io/salience-macos/docs/connect-your-tools)
+[Follow the example](https://clegginabox.github.io/salience-macos/docs/concepts) · [More screenshots](https://clegginabox.github.io/salience-macos/gallery)
 
-## Writing PHP? Start here
+## Explore further
 
-Salience works with any git repository, but it goes deepest on PHP today. It reads your `composer.json`, cues PHPUnit, Pest and PHPCS runs for the files you changed, one-clicks PHPStan, Psalm and `composer audit`, syncs your Symfony or Laravel routes, and answers a question grep can't: *what code does this route actually touch?* — in the app, and for your agents over MCP.
+- [Integrations](https://clegginabox.github.io/salience-macos/docs/integrations/) — find the tools you use and their connection guides.
+- [Using Salience](https://clegginabox.github.io/salience-macos/docs/using/) — workflow guides, including outlines being developed.
+- [MCP server](https://clegginabox.github.io/salience-macos/docs/mcp) — give a compatible agent access to the same joined context.
+- [Code Graph](https://clegginabox.github.io/salience-macos/docs/code-graph) — explore the code behind a route.
+- [Privacy and security](https://clegginabox.github.io/salience-macos/docs/privacy) — understand where your data lives and how to inspect connections.
+- [About Salience](https://clegginabox.github.io/salience-macos/docs/about) — why the project exists.
 
-[Code Graph →](https://clegginabox.github.io/salience-macos/docs/code-graph)
+## Help and feedback
 
-## Why
+For a problem with the app, [open an issue](https://github.com/clegginabox/salience-macos/issues) with your platform, app version and steps to reproduce it. Remove credentials and private project information from logs and screenshots.
 
-Salience is [Home Assistant](https://www.home-assistant.io/) for your dev tools. Each tool knows its own slice; none of them can answer the questions that span them — *is my ticket in sync with my PR? What's actually deployed right now?* Salience joins the slices and turns the questions into answers. [The full story →](https://clegginabox.github.io/salience-macos/docs/about)
-
-## Getting started
-
-1. [Download the alpha](https://clegginabox.github.io/salience-macos/download) — macOS 13+, Apple Silicon and Intel.
-2. Add a project (any local git repository).
-3. [Connect a tool](https://clegginabox.github.io/salience-macos/docs/connect-your-tools) — GitHub, Jira, AWS, Sentry, Docker — and watch the picture fill in.
-
-Full walkthrough: [First run →](https://clegginabox.github.io/salience-macos/docs/getting-started)
-
-> **Pre-release:** Salience is in early development. Expect rough edges — please report what you find on the [issues page](https://github.com/clegginabox/salience-macos/issues).
+For questions and discussion, [join the Discord](https://discord.gg/NErgbMHJr).
 
 ## This repository
 
-This repo hosts the documentation site and the release distribution for Salience.
+This repository contains Salience's documentation website and release distribution. The website uses VitePress, with pages in `docs/` and images in `docs/public/`.
+
+To preview documentation changes locally:
+
+```sh
+npm ci
+npm run docs:dev
+```
+
+To check the production build:
+
+```sh
+npm run docs:build
+npm run docs:preview
+```
+
+Documentation changes can be submitted as pull requests here.
