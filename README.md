@@ -2,9 +2,11 @@
 
 **Home Assistant for developer tools.**
 
-Salience is a macOS and Linux app that brings together your branches, tickets, pull requests, builds and local environment. It connects related work and lets you arrange it into pages of tiles.
+Salience is a macOS and Linux app that watches your branches, tickets, pull requests, builds, observability and local environment, and works out how they fit together: the ticket behind a branch, the PR it became, the image that PR built and where that image is running. That's how it catches what no single tool can see: a merged PR whose ticket is still open, branches and worktrees you no longer need, the commits that went out in the last deploy.
 
-Keep it visible for a quiet overview, explore the details when you need them, or give your agent access to the same context.
+It holds what your tools don't. Drop a spec, screenshot or log onto a ticket, PR or project; pin a note to anything; attach the Slack message where the decision was made. They join the same picture.
+
+Create your own dashboards, keep it on a second screen for a quiet overview, dig into the details when you need them, or give your agent the same joined-up context.
 
 > Salience is in alpha. Expect rough edges.
 
