@@ -1,16 +1,18 @@
 # Integrations
 
-Find the tools you use and learn what information each connection can bring into Salience.
+Salience reads from the tools you already use and connects what it finds into one picture of your work. Each guide covers what that tool brings in, how to connect it and what it can't do yet.
 
-Start with [Connect your tools](/docs/connect-your-tools) for the existing setup guide. The individual pages below are outlines to expand with setup steps, permissions and limitations.
+| Integration | What it brings in | Set up in |
+| --- | --- | --- |
+| [GitHub](./github) | Pull requests, reviews, conversation and GitHub Issues | **Settings → Git accounts** |
+| [CI](./ci) | Check results for your pull requests and branches, with logs for failed Actions jobs | Comes with GitHub |
+| [Jira](./jira) | Tickets from your boards, linked to branches and pull requests | **Project settings → Jira** |
+| [Docker](./docker) | Compose services and their containers, with start, stop and restart | Nothing to set up |
+| [AWS](./aws) | ECR images, ECS clusters, task definitions and running tasks | **Project settings → AWS** |
+| [Sentry](./sentry) | Unresolved issues, and stack traces mapped onto your code | **Project settings → Sentry** |
 
-| Integration | Guide |
-| --- | --- |
-| GitHub | [Pull requests, reviews and checks](./github) |
-| Jira | [Tickets, boards and status mappings](./jira) |
-| CI | [Builds and checks](./ci) |
-| Docker | [Containers and Compose services](./docker) |
-| AWS | [ECR images and ECS resources](./aws) |
-| Sentry | [Issues and project context](./sentry) |
+Every integration is read-only. Salience never changes anything in the tools it reads from, except that the Docker controls start and stop your local containers when you ask them to.
 
-<!-- Editorial: list only available integrations here. Keep planned providers in a separate, clearly labelled section. -->
+Credentials are kept in an encrypted store on your Mac. AWS and Docker don't need one: AWS uses your existing AWS CLI profiles, and Docker uses the `docker` command. See [Privacy and security](/docs/privacy).
+
+New to Salience? Start with [Concepts and terminology](/docs/concepts) to see how connections, entities and units of work fit together.

@@ -14,16 +14,18 @@ When Salience is signed and notarised this step will go away. Track progress at 
 
 ## My PRs or tickets aren't appearing
 
-1. Confirm the connector is connected: **Connections** sidebar entry shows a green dot next to the tool name.
-2. Check **Network Inspector** — you should see successful requests to the tool's API. If they're 401/403, the token is wrong or has expired; regenerate and re-paste.
-3. Sync runs every 5 minutes. Wait, or click **Sync now** if visible.
-4. Confirm the project's git remote actually points at the connected host. From the project root: `git remote -v`.
+1. For pull requests, check the project has a GitHub account chosen in **Project settings → Overview → Source**. A project without one shows **unbound — pull requests and CI won't sync**.
+2. For Jira tickets, check the ticket's board is ticked under **Included boards** in **Project settings → Jira**.
+3. Check the **Sync status** tile. It shows a row for each kind of data and whether its last sync failed.
+4. Check **Network Inspector**. If requests return 401 or 403, the token is wrong or has expired.
+5. Confirm the project's git remote points at `github.com`. From the project root: `git remote -v`.
+
+Each [integration guide](/docs/integrations/) has its own troubleshooting section.
 
 ## "Authentication failed" when adding a token
 
-- **GitHub:** classic PATs work; fine-grained tokens need to grant the specific repos read access for Pull requests, Contents, and Checks. Double-check the token hasn't expired.
-- **Bitbucket:** app passwords need the explicit checkbox permissions listed on [Connect your tools](/docs/connect-your-tools). Account passwords don't work — only app passwords or workspace/repo access tokens.
-- **Jira:** the token is paired with your email. The email must match the Atlassian account, not just the display name.
+- **GitHub:** `Token not stored: it grants more than Salience needs` means your classic token has scopes Salience doesn't need. The message lists them. Create a fine-grained token, or a classic token with only `repo`. If an account shows **Reconnect required**, GitHub rejected the token, usually because it expired or was revoked. Disconnect it, create a new token and connect again. Then choose the account again for each project. See [GitHub](/docs/integrations/github#troubleshooting).
+- **Jira:** the token is paired with your email. The email must be the one on the Atlassian account that created the token. See [Jira](/docs/integrations/jira#troubleshooting).
 
 ## Salience is using a lot of CPU
 

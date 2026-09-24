@@ -18,7 +18,7 @@ Keep it visible for a quiet overview, explore the details when you need them, or
 
 [**Get started →**](/docs/install) · [Concepts and terminology →](/docs/concepts)
 
-*In alpha. Free while it's in alpha.*
+*Salience is an early alpha*
 
 ## Start here
 

@@ -27,4 +27,4 @@ Salience stores connector credentials — GitHub tokens, Jira tokens, and other 
 Once Salience is running:
 
 - **[First run →](/docs/getting-started)** — add a project and see entities appear
-- **[Connect your tools →](/docs/connect-your-tools)** — wire up GitHub, Bitbucket, or Jira
+- **[Connect your tools →](/docs/connect-your-tools)** — GitHub, Jira, Docker, AWS and Sentry
