@@ -6,7 +6,7 @@ output="${1:-salience.png}"
 bounds=$(osascript -l JavaScript <<'JAVASCRIPT'
 ObjC.import('AppKit');
 
-const padding = 80;
+const padding = 40;
 const edgeInset = 8;
 const app = Application('System Events').processes.byName('Salience');
 if (!app.exists() || app.windows.length === 0) {
@@ -34,11 +34,15 @@ function overlap(screen) {
 // Keep the monitor the user chose, even when its desktop coordinates are negative.
 const screen = screens.reduce((best, next) => overlap(next) > overlap(best) ? next : best);
 const visible = rect(screen.visibleFrame);
+// Secondary displays can report a visibleFrame that still includes their menu bar.
+const menuHeight = Math.max(Number($.NSStatusBar.systemStatusBar.thickness),
+    ...screens.map(s => rect(s.visibleFrame).y - rect(s.frame).y));
+const usableTop = Math.max(visible.y, rect(screen.frame).y + menuHeight);
 const safe = {
     x: visible.x + edgeInset,
-    y: visible.y + edgeInset,
+    y: usableTop + edgeInset,
     width: visible.width - 2 * edgeInset,
-    height: visible.height - 2 * edgeInset
+    height: visible.y + visible.height - usableTop - 2 * edgeInset
 };
 const targetWidth = Math.floor(Math.min(1600, safe.width - 2 * padding));
 const targetHeight = Math.floor(Math.min(900, safe.height - 2 * padding));
