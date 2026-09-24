@@ -58,3 +58,11 @@ npm run docs:preview
 ```
 
 Documentation changes can be submitted as pull requests here.
+
+<a href="https://www.star-history.com/?repos=clegginabox%2Fsalience-macos&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=clegginabox/salience-macos&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=clegginabox/salience-macos&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=clegginabox/salience-macos&type=date&legend=top-left" />
+ </picture>
+</a>
