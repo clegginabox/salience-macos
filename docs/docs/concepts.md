@@ -1,89 +1,126 @@
-# Entities, correlations & situations
+---
+title: Concepts and terminology
+description: Projects, connections, entities, correlations, units of work, situations and tiles — the building blocks of Salience.
+---
 
-Every view in Salience — units, dashboards, the notifications feed — is a lens over the same four-step model. Understanding it takes five minutes and explains everything you'll see.
+# Concepts and terminology
 
-## The four steps
+Salience brings information from your developer tools into one workspace. A few building blocks explain how that information fits together and how you can arrange it.
 
-1. **Entities in.** Salience reads your tools and stores what it finds as typed records.
-2. **Correlations drawn.** Correlators join entities from different sources into one graph.
-3. **Situations derived.** Rules read that graph and promote the parts that need you.
-4. **Loudness assigned.** Each situation gets a level that decides how hard it tugs.
+This page follows one example: a Jira ticket to add a Docker Compose stack, a branch for the work, a GitHub pull request and its build checks. You can come back to individual sections as you encounter these terms in the app.
 
-Nothing in Salience shouts unless step 4 decided it deserved to.
+## Projects
+
+A **project** gives Salience the context for the work you're doing. Start by adding a local Git repository. Salience can then show its branches and, when you connect the relevant tools, related pull requests, tickets and builds.
+
+For our Docker setup, the project is the repository containing the application. The ticket, branch and pull request describe different parts of work on that application.
+
+[Add your first project →](/docs/getting-started)
+
+![Projects available in Salience](/concepts/concepts-project.png)
+
+## Connections
+
+A **connection** lets Salience read information from a tool you use. For example, a GitHub connection brings in pull requests, reviews and checks; a Jira connection brings in tickets.
+
+Your local repository supplies the branch for the Docker setup. Connecting GitHub and Jira adds the pull request and the ticket. You can start with one tool and connect others as you need them.
+
+The source tools remain the authority for their information. Salience brings that information together and keeps links back to the sources.
+
+[Connect your tools →](/docs/connect-your-tools)
+
+![Jira connector configuration](/concepts/concepts-connectors.png)
 
 ## Entities
 
-An entity is a typed, addressed record of something real: `git.branch`, `vcs.pull_request`, `ticket`, `ci.run`, `ci.commit_status`, `docker.container`, `aws.ecr.image`, `aws.ecs.task`, `route`, `sentry.issue`, and around thirty more — plus the derived ones Salience computes itself (`unit.work`, `situation`, `pr.involvement`).
+An **entity** is something Salience knows about. A branch is an entity. So are a pull request, a ticket, a build run and a Docker container.
 
-Two things follow from that, and they're the reason Salience isn't a status page:
+Each entity holds information about that thing: a branch has a name, a pull request has a review state, and a build run has a result. Salience updates this information as it reads from your tools.
 
-- **Entities persist.** They live in an embedded database on your machine, not in a fetch-and-forget render loop. Yesterday's PR is still there.
-- **Entities stream.** When a sync updates one, the change flows straight to the UI as a delta. You don't refresh anything.
+In our example, these are separate entities:
 
-Tickets are the one type deliberately kept global — the same Jira ticket can legitimately belong to more than one project. Everything else is scoped to the project it came from, which is why two repos with a `main` branch never bleed into each other.
+| Entity | Example |
+| --- | --- |
+| Jira ticket | `DEMO-2`: Docker setup |
+| Git branch | `DEMO-2-docker` |
+| GitHub pull request | `#3`: Adding a docker-compose stack to the project |
+| Build run | The checks for the pull request's latest commit |
+
+![Dashboard showing pull requests and tickets](/concepts/concepts-entities.png)
 
 ## Correlations
 
-A correlator is a small piece of logic that looks at two entity types and draws an edge when they match. Each edge carries a confidence: **deterministic** when the join is exact (a SHA, an ID, a declared link) or **inferred** when it rests on a naming convention.
+A **correlation** is a relationship between entities. It connects information that would otherwise sit separately in your tools.
 
-| Link drawn | How |
+For example, Salience can relate the ticket `DEMO-2` to the branch `DEMO-2-docker` because the branch name contains the ticket key. It can relate the pull request to its branch, and a build run to the pull request's commit.
+
+Together, those relationships let you follow the work:
+
+**Ticket ↔ branch ↔ pull request ↔ build checks**
+
+Some relationships come from explicit identifiers, such as a commit SHA. Others are inferred from conventions, such as a ticket key in a branch name. What Salience can connect depends on the information available from your tools.
+
+![Entity explorer showing a unit and its correlations](/concepts/concepts-correlations.png)
+
+## Units of work
+
+A **unit of work** brings related entities together so you can read them as one piece of work.
+
+For the Docker setup, that means seeing the branch alongside its ticket, pull request and checks. If a check fails, you can see which work it belongs to without matching it up across browser tabs.
+
+A unit can have only some of these parts. A new branch may not have a pull request yet, and work without a linked ticket can still appear.
+
+[See a unit of work in the first-run guide →](/docs/getting-started#_3-look-at-the-result)
+
+![A unit of work bringing together the Docker setup ticket, branch and pull request](/concepts/concepts-unit-of-work.png)
+
+## Tiles and pages
+
+A **tile** is a view of information: a list of units, a pull request description, a diff, or container logs. A **page** holds tiles, and its **layout** is how those tiles are arranged.
+
+For the Docker setup ticket, you might place a units tile beside the pull request details and diff. For work on your local stack, you might arrange containers and logs together instead.
+
+![A blank page with the tile explorer](/concepts/concepts-pages-tiles.png)
+
+## Situations
+
+A **situation** is something Salience notices about your work that may need your attention.
+
+A failed check or a request for changes may need a look. You might also have created `DEMO-2-docker` and started working while the linked Jira ticket still says To Do. Salience can highlight that mismatch because it knows about both the branch and the ticket.
+
+The same joined context also helps with cleanup. After a pull request is merged, Salience can identify local branches still pointing at the merged work and worktrees with no uncommitted changes. The **Clean up** menu lists the candidates and, for worktrees, can show how much disk space they use. Its actions prepare removal commands for you to review and run in your terminal.
+
+A situation helps you understand the state of your work. You decide what to do next: an open ticket after a merge might need updating, or it might be waiting for a deployment.
+
+![The Clean up menu identifying a local branch whose pull request has merged](/concepts/concepts-clean-up.png)
+
+<!-- ## Loudness
+
+**Loudness** describes how prominently a situation is presented. It helps you scan the workspace and decide where to look.
+
+| Level | Meaning |
 | --- | --- |
-| CI run → pull request | The run's commit SHA equals the PR's head SHA |
-| Branch → ticket | A ticket key appears in the branch name (`LW-508-login`) |
-| Branch → GitHub issue | GitHub's `3-bootstrap-application` issue-number branch convention |
-| Branch → pull request | The branch name matches the PR's head branch |
-| PR → ticket | Ticket key in the title or head branch, classified *Closes* (a closing keyword), *Implements* (key in the branch) or *References* (a bare mention) |
-| CI pipeline → repository | The pipeline declares which repo it builds; you can pin it yourself |
-| CI run → ECR image | The run's SHA appears in an image tag — only where you've pinned the pipeline to that ECR repo |
-| Task definition → ECR image | The task def's container image resolves to an image in your registry |
-| Running ECS task → task definition | The task's family matches a mirrored task definition |
-| Ticket → ticket | Jira's own *blocks* / *blocked by* links |
-| Compose service → container | A declared service in your compose file matched to the container actually running |
+| **Calm** | Background information that can sit quietly. |
+| **Notable** | Something worth taking a closer look at. |
+| **Loud** | Something given greater prominence. |
 
-Individually these are unremarkable. Chained, they're the point.
+Loudness depends on the situation and can change over time. For example, a review request can become more prominent as it waits.
 
-**Branch → PR → ticket.** The chain that makes a piece of work one thing rather than three browser tabs. It's what powers the unit of work Salience builds for every branch, and what lets the units board group your work by what needs you instead of by ticket ID.
+Salience is designed to remain visible without interrupting you. A quiet workspace reflects what Salience currently knows from its connected tools; it isn't a guarantee that all your work is complete or healthy.
 
-**PR → CI run → ECR image → task definition → running ECS task.** The chain that answers *what's actually deployed right now* — walk from a running container back to the commit, or from a merged PR forward to whether it's live. No single tool in that chain can answer it.
+Image: examples of calm, notable and loud situations, with text labels. -->
 
-Edges are also inspectable and, in places, yours to control: a pipeline→repo link you pin by hand is treated as declared fact, and the CI-run→image correlator refuses to guess until you've pinned it.
+## The same context for your agent
 
-## Rules and situations
+Salience's **MCP server** makes its joined information available to compatible AI tools. Your agent can read related work context without you copying it from each source by hand.
 
-Rules read the correlated graph and derive new entities from it. Some produce raw analysis; others produce **situations** — the things Salience will actually surface to you.
+For example, you can ask an agent about the Docker setup using the ticket, pull request and checks Salience has gathered. The available context depends on what you've connected and what has synced.
 
-| Rule | What it derives |
-| --- | --- |
-| PR involvement | Your relationship to each open PR — author, reviewer, whether the ball is in your court, who acted last |
-| Ticket involvement | Whether a ticket is yours (assignee today; mentions and board ownership are placeholders) |
-| Review situations | *Needs my review* and *needs my re-look* — the reviewer side |
-| PR author situations | One situation per author-facing condition: changes requested, CI failed, merge conflicts, unresolved threads awaiting your reply, and ready-to-merge |
-| Drift situations | Cross-source hygiene — PR merged but the ticket is still open, ticket Done but the PR isn't, branch exists but the ticket never moved, ticket with no branch or PR at all |
-| Unit of work | Materialises branch ∪ PR ∪ ticket ∪ CI as a single `unit.work` entity — what the Units views and dashboard tiles read |
-| CI expectation | Tracks commits whose CI hasn't settled, so polling follows real work rather than a fixed timer |
+[Set up the MCP server →](/docs/mcp)
 
-A situation carries four things: a **kind** (`work_item`, `review_gate`, `check`, `build_status`, `hygiene`), a **loudness**, a plain-English **reason** — *"PR #412 merged but LW-508 is still 'In Progress' — move it to Done"* — and at most one **primary action**.
+## Next steps
 
-One action, deliberately. Salience surfaces state and hands you the next step; it doesn't decide on your behalf, and destructive work goes to a pre-filled terminal command rather than a button.
-
-## Loudness
-
-Loudness is the contract between Salience and your attention. Every situation is exactly one of:
-
-| Level | Means | Behaviour |
-| --- | --- | --- |
-| **Calm** | True, worth knowing, not urgent | Sits quietly. Your PR is approved and green; your ticket has no branch yet |
-| **Notable** | Something wants you, soon | Visible without being loud. Changes requested, CI red, merge conflicts, a review just landed on your desk |
-| **Loud** | This has waited long enough | Earns real prominence. A requested review you haven't looked at for hours |
-
-Loudness isn't a severity label baked into an event type — it's computed, and some of it moves with time. A requested review starts **Notable** and escalates to **Loud** once it has waited past your threshold (three hours by default, configurable). Hygiene drift is Notable when it's a real inconsistency, Calm when it's just a branch that got ahead of its ticket.
-
-The practical consequence: you can leave Salience on a second monitor all day. If nothing is loud, nothing needs you — and that's a claim the rules are accountable for, not a mood.
-
-## Where to see it
-
-- **The notifications feed** is every situation across every project, filterable by loudness. It's the flat view of what the rules decided.
-- **Units** reads the materialised units of work, which is why the board can group your work by state — in review, needs attention — rather than by ticket number.
-- **[The MCP server](/docs/mcp)** exposes the same entities, edges and situations to your AI agent. When you ask "what's my stand-up?", it's reading this graph — not scraping five tabs.
-
-Everything here is derived locally, from data already on your machine or already in your tools. See [Privacy & security](/docs/privacy) for where it lives.
+- [First run](/docs/getting-started) — add a project and see its information appear.
+- [Connect your tools](/docs/connect-your-tools) — bring in the sources you use.
+- [Configuration](/docs/configuration) — adjust Salience for your projects.
+- [Privacy and security](/docs/privacy) — understand where your data lives.

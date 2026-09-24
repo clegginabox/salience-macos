@@ -178,7 +178,7 @@ Every field is optional. Missing sections and missing keys fall back to the defa
 | `updater` | `auto_check` looks for updates on launch and every 6 hours. `auto_download` fetches an available update without asking — applying it is still gated on you clicking "Apply and restart". Has UI. |
 | `mcp` | `enabled` is the master switch for the in-app MCP server. Defaults to `false` (opt-in — see [MCP server](/docs/mcp)). Has UI. |
 | `attention` | `review_escalate_hours` is how long a requested review may sit before its situation escalates from notable to loud. |
-| `credentials` | `accept_overprivileged` lets you connect a GitHub classic PAT that grants more than Salience needs. Hand-edited only, no UI — see [Connect your tools](/docs/connect-your-tools). |
+| `credentials` | `accept_overprivileged` lets you connect a GitHub classic PAT that grants more than Salience needs. Hand-edited only, no UI — see [GitHub](/docs/integrations/github#troubleshooting). |
 | `network` | Deployment-specific additions to the outbound allowlist — a corporate proxy, a self-hosted Jira, a GitHub Enterprise host. Hand-edited only, no UI, so these stay local instead of shipping in the binary. |
 | `ui` | `zoom` is the webview zoom factor; `1.0` is 100%. Out-of-range values are clamped. |
 

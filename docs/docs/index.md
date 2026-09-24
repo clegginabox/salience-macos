@@ -1,21 +1,27 @@
 # Salience documentation
 
-Salience is a macOS app that knows what you're working on. It connects the tools you already use — GitHub, Jira, CI, Docker, AWS, Sentry — and joins what they know into one live picture: every branch, PR, ticket and build, what state it's in, and what needs you. You glance at it; your agents query it over [MCP](/docs/mcp).
+Learn the building blocks, connect your tools and arrange a workspace around your work.
 
-Start with **Install** if you're new, or jump straight to **Code Graph**, **MCP server**, or **Privacy & security** if that's why you're here.
+## Get started
 
-## Common starting points
+[Install Salience](/docs/install), then follow [First run](/docs/getting-started) to add a project and connect your first tool.
 
-- **[Install →](/docs/install)** — download, system requirements, first launch
-- **[First run →](/docs/getting-started)** — add a project, connect a tool, see your entities fill in
-- **[Connect your tools →](/docs/connect-your-tools)** — GitHub, Jira, AWS, Sentry, Docker
-- **[MCP server →](/docs/mcp)** — point Claude, Codex, or Cursor at Salience
-- **[Privacy & security →](/docs/privacy)** — where your data lives, what gets sent off-machine
+## Concepts
 
-## Going deeper
+[Concepts and terminology](/docs/concepts) introduces projects, connections, entities, correlations, units of work, situations, tiles and pages through one example.
 
-- **[Code Graph →](/docs/code-graph)** — route-seeded call-graph maps (PHP today)
-- **[Keyboard shortcuts →](/docs/shortcuts)** — every binding, on one page
-- **[Entities, correlations & situations →](/docs/concepts)** — how Salience thinks
+## Integrations
 
-If something isn't working, **[Troubleshooting →](/docs/troubleshooting)** is the place to start. For everything else — questions, feedback, or just to say hi — join the [Discord](https://discord.gg/NErgbMHJr).
+[Browse integrations](/docs/integrations/) or go straight to [Connect your tools](/docs/connect-your-tools). Individual integration guides are scaffolded for setup steps, permissions and limitations.
+
+## Using Salience
+
+[Workflow guides](/docs/using/) cover arranging pages, reviewing pull requests, checking builds and preparing for stand-up. These new guides are outlines; the existing [Code Graph](/docs/code-graph) and [MCP](/docs/mcp) guides are also linked there.
+
+## Reference
+
+[Reference](/docs/reference/) brings together the glossary, configuration, keyboard shortcuts, privacy information and troubleshooting.
+
+## Development
+
+[Development](/docs/development/) contains outlines for local setup, architecture and contributing.
