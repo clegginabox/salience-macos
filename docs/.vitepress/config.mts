@@ -28,56 +28,199 @@ export default defineConfig({
 
   themeConfig: {
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Gallery', link: '/gallery' },
-      { text: 'Docs', link: '/docs/' },
-      { text: 'Download', link: '/download' },
-    ],
+  {
+    "text": "Get started",
+    "link": "/docs/install"
+  },
+  {
+    "text": "Concepts",
+    "link": "/docs/concepts"
+  },
+  {
+    "text": "Integrations",
+    "link": "/docs/integrations/"
+  },
+  {
+    "text": "Documentation",
+    "items": [
+      {
+        "text": "All documentation",
+        "link": "/docs/"
+      },
+      {
+        "text": "Using Salience",
+        "link": "/docs/using/"
+      },
+      {
+        "text": "Reference",
+        "link": "/docs/reference/"
+      },
+      {
+        "text": "Development",
+        "link": "/docs/development/"
+      },
+      {
+        "text": "Gallery",
+        "link": "/gallery"
+      }
+    ]
+  },
+  {
+    "text": "Download",
+    "link": "/download"
+  }
+],
 
     sidebar: {
-      '/docs/': [
+  "/docs/": [
+    {
+      "text": "Get started",
+      "items": [
         {
-          text: 'Getting started',
-          items: [
-            { text: 'Install', link: '/docs/install' },
-            { text: 'First run', link: '/docs/getting-started' },
-          ],
+          "text": "Install",
+          "link": "/docs/install"
         },
         {
-          text: 'Guide',
-          items: [
-            { text: 'Code Graph', link: '/docs/code-graph' },
-          ],
-        },
-        {
-          text: 'Concepts',
-          items: [
-            { text: 'Concepts and terminology', link: '/docs/concepts' },
-          ],
-        },
-        {
-          text: 'Using Salience',
-          items: [
-            { text: 'Connect your tools', link: '/docs/connect-your-tools' },
-            { text: 'Configuration', link: '/docs/configuration' },
-            { text: 'MCP server', link: '/docs/mcp' },
-            { text: 'Keyboard shortcuts', link: '/docs/shortcuts' },
-          ],
-        },
-        {
-          text: 'Privacy & security',
-          items: [
-            { text: 'Privacy & security', link: '/docs/privacy' },
-          ],
-        },
-        {
-          text: 'Help',
-          items: [
-            { text: 'Troubleshooting', link: '/docs/troubleshooting' },
-          ],
-        },
-      ],
+          "text": "First run",
+          "link": "/docs/getting-started"
+        }
+      ]
     },
+    {
+      "text": "Concepts",
+      "items": [
+        {
+          "text": "Concepts and terminology",
+          "link": "/docs/concepts"
+        }
+      ]
+    },
+    {
+      "text": "Integrations",
+      "items": [
+        {
+          "text": "Overview",
+          "link": "/docs/integrations/"
+        },
+        {
+          "text": "Connect your tools",
+          "link": "/docs/connect-your-tools"
+        },
+        {
+          "text": "GitHub",
+          "link": "/docs/integrations/github"
+        },
+        {
+          "text": "Jira",
+          "link": "/docs/integrations/jira"
+        },
+        {
+          "text": "CI",
+          "link": "/docs/integrations/ci"
+        },
+        {
+          "text": "Docker",
+          "link": "/docs/integrations/docker"
+        },
+        {
+          "text": "AWS",
+          "link": "/docs/integrations/aws"
+        },
+        {
+          "text": "Sentry",
+          "link": "/docs/integrations/sentry"
+        }
+      ]
+    },
+    {
+      "text": "Using Salience",
+      "items": [
+        {
+          "text": "Overview",
+          "link": "/docs/using/"
+        },
+        {
+          "text": "Tiles and pages",
+          "link": "/docs/using/tiles-and-pages"
+        },
+        {
+          "text": "Review a pull request",
+          "link": "/docs/using/review-a-pull-request"
+        },
+        {
+          "text": "Check a build",
+          "link": "/docs/using/check-a-build"
+        },
+        {
+          "text": "Stand-up",
+          "link": "/docs/using/stand-up"
+        },
+        {
+          "text": "Code Graph",
+          "link": "/docs/code-graph"
+        },
+        {
+          "text": "MCP server",
+          "link": "/docs/mcp"
+        }
+      ]
+    },
+    {
+      "text": "Reference",
+      "items": [
+        {
+          "text": "Overview",
+          "link": "/docs/reference/"
+        },
+        {
+          "text": "Glossary",
+          "link": "/docs/reference/glossary"
+        },
+        {
+          "text": "Configuration",
+          "link": "/docs/configuration"
+        },
+        {
+          "text": "Keyboard shortcuts",
+          "link": "/docs/shortcuts"
+        },
+        {
+          "text": "Privacy and security",
+          "link": "/docs/privacy"
+        },
+        {
+          "text": "Troubleshooting",
+          "link": "/docs/troubleshooting"
+        }
+      ]
+    },
+    {
+      "text": "Development",
+      "items": [
+        {
+          "text": "Overview",
+          "link": "/docs/development/"
+        },
+        {
+          "text": "Local development",
+          "link": "/docs/development/local-development"
+        },
+        {
+          "text": "Architecture",
+          "link": "/docs/development/architecture"
+        },
+        {
+          "text": "Contributing",
+          "link": "/docs/development/contributing"
+        },
+        {
+          "text": "About Salience",
+          "link": "/docs/about"
+        }
+      ]
+    }
+  ]
+},
 
     socialLinks: [
       { icon: 'discord', link: 'https://discord.gg/NErgbMHJr' },
