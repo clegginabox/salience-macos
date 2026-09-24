@@ -26,6 +26,27 @@ The Docker setup ticket, its branch, pull request and build checks, brought toge
 
 [Follow the example](https://clegginabox.github.io/salience-macos/docs/concepts) · [More screenshots](https://clegginabox.github.io/salience-macos/gallery)
 
+## Connectors
+
+| Connector | What it brings in |
+| --- | --- |
+| Git | Local branches and worktrees, read straight from disk |
+| [GitHub](https://clegginabox.github.io/salience-macos/docs/integrations/github) | Pull requests, reviews, conversation and GitHub Issues |
+| [CI](https://clegginabox.github.io/salience-macos/docs/integrations/ci) | Check results for your pull requests and branches, from GitHub Actions and any CI that reports to GitHub |
+| [Jira](https://clegginabox.github.io/salience-macos/docs/integrations/jira) | Tickets from the boards you pick |
+| [Sentry](https://clegginabox.github.io/salience-macos/docs/integrations/sentry) | Unresolved issues, with stack traces mapped onto your code |
+| Slack | Messages that mention you, ready to attach to a ticket, PR or project |
+| [AWS](https://clegginabox.github.io/salience-macos/docs/integrations/aws) | ECR images, ECS clusters, task definitions and running tasks |
+| [Docker](https://clegginabox.github.io/salience-macos/docs/integrations/docker) | Compose services and their containers, with start, stop and restart |
+
+Every connector is read-only, except the Docker controls, which start and stop your local containers when you ask. GitLab and Linear are coming soon.
+
+## Build your own dashboards
+
+Pick from 45 tiles to build a page around the work you're doing: units of work, branches and worktrees, reviews and tickets, builds and containers, agents and app health.
+
+![The Add tiles dialog listing all 45 tiles by category](docs/public/concepts/concepts-pages-tiles.png)
+
 ## Explore further
 
 - [Integrations](https://clegginabox.github.io/salience-macos/docs/integrations/) 

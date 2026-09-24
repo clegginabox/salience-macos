@@ -49,7 +49,7 @@
   </figure>
   <figure>
     <img src="/screenshots/tile-list.png" alt="The Add tiles dialog listing tiles by category">
-    <figcaption>43 tiles across overview, git and worktrees, reviews and tickets, build and runtime, agents, and app connections.</figcaption>
+    <figcaption>45 tiles across overview, git and worktrees, reviews and tickets, build and runtime, agents, and app connections.</figcaption>
   </figure>
 </div>
 
