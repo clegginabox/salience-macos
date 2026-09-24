@@ -34,6 +34,16 @@ The Docker setup ticket, its branch, pull request and build checks, brought toge
 
 [Follow the example →](/docs/concepts) · [More screenshots →](/gallery)
 
+## Available Connectors
+
+- Github
+- Jira
+- Sentry
+- Slack
+- AWS - ECR, ECS (Fargate)
+- Gitlab (coming soon)
+- Linear (coming soon)
+
 ## Explore further
 
 - **[Tiles and pages](/docs/using/tiles-and-pages)** — arrange a workspace around the information you want to see. *Guide in progress.*
