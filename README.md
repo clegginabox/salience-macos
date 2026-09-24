@@ -6,7 +6,7 @@ Salience is a macOS and Linux app that brings together your branches, tickets, p
 
 Keep it visible for a quiet overview, explore the details when you need them, or give your agent access to the same context.
 
-> Salience is in alpha and free to use during alpha. Expect rough edges.
+> Salience is in alpha. Expect rough edges.
 
 ## Start here
 
