@@ -16,6 +16,6 @@ Start with **Install** if you're new, or jump straight to **Code Graph**, **MCP 
 
 - **[Code Graph →](/docs/code-graph)** — route-seeded call-graph maps (PHP today)
 - **[Keyboard shortcuts →](/docs/shortcuts)** — every binding, on one page
-- **[Entities, correlations & situations →](/docs/concepts)** — how Salience thinks
+- **[Concepts and terminology →](/docs/concepts)** — how Salience thinks
 
 If something isn't working, **[Troubleshooting →](/docs/troubleshooting)** is the place to start. For everything else — questions, feedback, or just to say hi — join the [Discord](https://discord.gg/NErgbMHJr).

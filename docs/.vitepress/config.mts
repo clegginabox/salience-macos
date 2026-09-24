@@ -52,7 +52,7 @@ export default defineConfig({
         {
           text: 'Concepts',
           items: [
-            { text: 'Entities, correlations & situations', link: '/docs/concepts' },
+            { text: 'Concepts and terminology', link: '/docs/concepts' },
           ],
         },
         {
