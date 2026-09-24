@@ -41,21 +41,7 @@ For questions and discussion, [join the Discord](https://discord.gg/NErgbMHJr).
 
 ## This repository
 
-This repository contains Salience's documentation website and release distribution. The website uses VitePress, with pages in `docs/` and images in `docs/public/`.
-
-To preview documentation changes locally:
-
-```sh
-npm ci
-npm run docs:dev
-```
-
-To check the production build:
-
-```sh
-npm run docs:build
-npm run docs:preview
-```
+This repository contains Salience's documentation website and release distribution.
 
 Documentation changes can be submitted as pull requests here.
 
