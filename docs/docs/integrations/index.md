@@ -1,6 +1,8 @@
 # Integrations
 
-Salience reads from the tools you already use and connects what it finds into one picture of your work. Each guide covers what that tool brings in, how to connect it and what it can't do yet.
+Salience reads from the tools you already use and connects what it finds into one picture of your work. 
+
+Each guide covers what that tool brings in, how to connect it and what it can't do (yet).
 
 | Integration | What it brings in | Set up in |
 | --- | --- | --- |
@@ -13,6 +15,6 @@ Salience reads from the tools you already use and connects what it finds into on
 
 Every integration is read-only. Salience never changes anything in the tools it reads from, except that the Docker controls start and stop your local containers when you ask them to.
 
-Credentials are kept in an encrypted store on your Mac. AWS and Docker don't need one: AWS uses your existing AWS CLI profiles, and Docker uses the `docker` command. See [Privacy and security](/docs/privacy).
+Credentials are kept in an encrypted store. AWS and Docker don't need one: AWS uses your existing AWS CLI profiles, and Docker uses the `docker` command. See [Privacy and security](/docs/privacy).
 
 New to Salience? Start with [Concepts and terminology](/docs/concepts) to see how connections, entities and units of work fit together.
