@@ -4,29 +4,34 @@ The fastest way to understand Salience is to point it at a real project and watc
 
 ## 1. Add a project
 
-Open Salience and click **Add project** in the sidebar. Pick a directory on your machine — typically the root of a git repository. Salience will scan it for a `.git` folder and (optionally) a `salience.toml`.
+Open Salience and click **New project**. 
 
-If the directory is a git repository, your local branches show up immediately as entities of type `git.branch`. No tools connected yet — this is local data only.
+Pick a git repository on your machine. Salience will scan it for a `.git` folder and (optionally) a `salience.toml`.
 
-## 2. Connect one tool
+Salience will automatically find local branches as `git.branch` and worktrees as `git.worktree`.
 
-Open **Connections** in the sidebar and pick one tool to start with. GitHub is the most common starting point:
+![Project overview](/concepts/concepts-project.png)
 
-1. Generate a personal access token at [github.com/settings/tokens](https://github.com/settings/tokens) — `repo` scope is enough for a private repo, no scope is needed for a public one.
-2. Paste it into the GitHub field in Salience.
-3. Save.
+## 2. Set up a connector
 
-Within a minute, open pull requests for your project show up as `vcs.pull_request` entities.
+Open **Project Settings** in the sidebar and pick a connector to start with. GitHub is the most common starting point:
+
+1. Generate a personal access token at [github.com/settings/tokens](https://github.com/settings/tokens) - Salience refuses a classic token that grants anything beyond `repo`, `public_repo`, `read:org` and `notifications`.
+2. Paste the token into **Personal access token**, optionally add a label(e.g. "work"), and press **Connect**.
+
+Select the account you just added under **This project's account**.
+
+![Project overview](/connectors/config-github.png)
+
+Salience never writes to GitHub. It only reads, and it never marks notifications as read.
 
 ## 3. Look at the result
 
-Open **Entities** in the sidebar. The **Units** tab joins each branch with its PR, ticket and (if a token-bearing CI is configured) CI checks into one row; select a unit to see which checks failed and open the logs. The **PRs**, **Tickets** and **Branches** tabs list the same data by source.
+Open **Entities** in the sidebar. The **Units** tab joins each branch with its PR, ticket and CI checks into one row.
 
-![A unit of work: linked branch, PR and failing CI checks](/screenshots/unit-view.png)
+![A unit of work: linked branch, PR and failing CI checks](/getting-started/entities.png)
 
-**Dashboard** is the same data as tiles — a board of units by state, a diff viewer, your containers and their logs — laid out however you like per project. Both surfaces _are_ the entity store, rendered.
-
-If anything looks empty, give it 30 seconds — the GitHub sync runs every 5 minutes, but the first one fires immediately on token save.
+Salience continually updates as it receives updates from connectors.
 
 ## Next
 

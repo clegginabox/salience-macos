@@ -1,7 +1,5 @@
 # Connect your tools
 
-Salience reads from the tools you already use. This page is an overview. Each tool has its own guide with setup steps, permissions and limitations.
-
 | Tool | What it brings in | Set up in | Credential |
 | --- | --- | --- | --- |
 | [GitHub](/docs/integrations/github) | Pull requests, reviews, conversation and GitHub Issues | **Settings → Git accounts**, then each project | Personal access token |
