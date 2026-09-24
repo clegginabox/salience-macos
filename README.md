@@ -14,7 +14,7 @@ Create your own dashboards, keep it on a second screen for a quiet overview, dig
 
 - **[Get started](https://clegginabox.github.io/salience-macos/docs/install)** — install Salience, add a project and connect your first tool.
 - **[Concepts and terminology](https://clegginabox.github.io/salience-macos/docs/concepts)** — understand entities, correlations, units of work, situations, tiles and pages through a worked example.
-- **[Connect your tools](https://clegginabox.github.io/salience-macos/docs/connect-your-tools)** — bring in information from the tools you use.
+- **[Connect your tools](https://clegginabox.github.io/salience-macos/docs/connect-your-tools)**
 
 [Downloads](https://clegginabox.github.io/salience-macos/download) · [Releases](https://github.com/clegginabox/salience-macos/releases) · [All documentation](https://clegginabox.github.io/salience-macos/docs/)
 
@@ -22,18 +22,18 @@ Create your own dashboards, keep it on a second screen for a quiet overview, dig
 
 ![Salience on macOS showing the Docker setup unit, its pull request, passing checks and related activity](docs/public/concepts/concepts-unit-of-work.png)
 
-The Docker setup ticket, its branch, pull request and build checks, brought together in Salience. The page combines a units list, activity and status tiles around the same work.
+The Docker setup ticket, its branch, pull request and build checks, brought together in Salience.
 
 [Follow the example](https://clegginabox.github.io/salience-macos/docs/concepts) · [More screenshots](https://clegginabox.github.io/salience-macos/gallery)
 
 ## Explore further
 
-- [Integrations](https://clegginabox.github.io/salience-macos/docs/integrations/) — find the tools you use and their connection guides.
+- [Integrations](https://clegginabox.github.io/salience-macos/docs/integrations/) 
 - [Using Salience](https://clegginabox.github.io/salience-macos/docs/using/) — workflow guides, including outlines being developed.
-- [MCP server](https://clegginabox.github.io/salience-macos/docs/mcp) — give a compatible agent access to the same joined context.
-- [Code Graph](https://clegginabox.github.io/salience-macos/docs/code-graph) — explore the code behind a route.
+- [MCP server](https://clegginabox.github.io/salience-macos/docs/mcp) 
+- [Code Graph](https://clegginabox.github.io/salience-macos/docs/code-graph) 
 - [Privacy and security](https://clegginabox.github.io/salience-macos/docs/privacy) — understand where your data lives and how to inspect connections.
-- [About Salience](https://clegginabox.github.io/salience-macos/docs/about) — why the project exists.
+- [About Salience](https://clegginabox.github.io/salience-macos/docs/about)
 
 ## Help and feedback
 
