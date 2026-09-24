@@ -92,6 +92,10 @@ export default defineConfig({
         {
           "text": "Concepts and terminology",
           "link": "/docs/concepts"
+        },
+        {
+          "text": "Entities",
+          "link": "/docs/entities"
         }
       ]
     },
