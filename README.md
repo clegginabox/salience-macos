@@ -10,13 +10,13 @@ Create your own dashboards, keep it on a second screen for a quiet overview, dig
 
 > Salience is in alpha. Expect rough edges.
 
+[Downloads](https://clegginabox.github.io/salience-macos/download) · [Releases](https://github.com/clegginabox/salience-macos/releases) · [All documentation](https://clegginabox.github.io/salience-macos/docs/)
+
 ## Start here
 
 - **[Get started](https://clegginabox.github.io/salience-macos/docs/install)** — install Salience, add a project and connect your first tool.
 - **[Concepts and terminology](https://clegginabox.github.io/salience-macos/docs/concepts)** — understand entities, correlations, units of work, situations, tiles and pages through a worked example.
 - **[Connect your tools](https://clegginabox.github.io/salience-macos/docs/connect-your-tools)**
-
-[Downloads](https://clegginabox.github.io/salience-macos/download) · [Releases](https://github.com/clegginabox/salience-macos/releases) · [All documentation](https://clegginabox.github.io/salience-macos/docs/)
 
 ## One piece of work, across several tools
 
