@@ -20,7 +20,7 @@ Create your own dashboards, keep it on a second screen for a quiet overview, dig
 
 ## One piece of work, across several tools
 
-![Salience on macOS showing the Docker setup unit, its pull request, passing checks and related activity](docs/public/concepts/concepts-unit-of-work.png)
+![Salience on macOS showing the Docker setup unit, its pull request, passing checks and related activity](docs/public/readme.png)
 
 The Docker setup ticket, its branch, pull request and build checks, brought together in Salience.
 
