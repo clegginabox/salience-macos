@@ -43,7 +43,7 @@ Every connector is read-only, except the Docker controls, which start and stop y
 
 ## Build your own dashboards
 
-Pick from 45 tiles to build a page around the work you're doing: units of work, branches and worktrees, reviews and tickets, builds and containers, agents and app health.
+Pick from over [45 tiles](https://clegginabox.github.io/salience-macos/docs/reference/tiles) to build a page around the work you're doing: units of work, branches and worktrees, reviews and tickets, builds and containers, agents and app health.
 
 ![The Add tiles dialog listing all 45 tiles by category](docs/public/concepts/concepts-pages-tiles.png)
 
