@@ -177,6 +177,10 @@ export default defineConfig({
           "link": "/docs/reference/glossary"
         },
         {
+          "text": "Tiles",
+          "link": "/docs/reference/tiles"
+        },
+        {
           "text": "Configuration",
           "link": "/docs/configuration"
         },
