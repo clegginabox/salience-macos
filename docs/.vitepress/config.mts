@@ -52,6 +52,10 @@ export default defineConfig({
         "link": "/docs/using/"
       },
       {
+        "text": "Features",
+        "link": "/docs/features/"
+      },
+      {
         "text": "Reference",
         "link": "/docs/reference/"
       },
@@ -162,6 +166,27 @@ export default defineConfig({
         {
           "text": "MCP server",
           "link": "/docs/mcp"
+        }
+      ]
+    },
+    {
+      "text": "Features",
+      "items": [
+        {
+          "text": "Overview",
+          "link": "/docs/features/"
+        },
+        {
+          "text": "Project files",
+          "link": "/docs/features/project-files"
+        },
+        {
+          "text": "Timer",
+          "link": "/docs/features/timer"
+        },
+        {
+          "text": "Clean up",
+          "link": "/docs/features/clean-up"
         }
       ]
     },

@@ -14,6 +14,8 @@ This page is an outline. Follow the linked guides for the instructions currently
 
 <!-- TODO: Show the tile browser, search and categories. -->
 
+The [Tiles reference](/docs/reference/tiles) lists every tile the browser offers, grouped the way the browser groups them.
+
 ## Configure the tile
 
 <!-- TODO: Explain scope, filters, title and size using the Docker example from Concepts. -->
