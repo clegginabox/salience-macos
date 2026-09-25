@@ -6,75 +6,75 @@ Every tile the tile browser offers, grouped the way the browser groups them. Whe
 
 ## Overview
 
-| Tile          | What it shows                                                                                                 | Lists       |
-| ------------- | ------------------------------------------------------------------------------------------------------------- | ----------- |
-| Activity      | Follow recent events across the project’s connected tools.                                                    |             |
-| Count         | Needs my review, waiting on review, requested changes, PRs, branches, or failed builds. Show a count or list. |             |
-| Entity status | A compact status for a branch, pull request, or CI run.                                                       |             |
-| Inspector     | Compact browser for linked work: descriptions, conversations, commits and CI.                                 |             |
-| Timer         | One running timer with overtime, and the day’s sessions to edit and copy.                                     |             |
-| Unit status   | Ticket, local work, review, and CI glyphs for a selected or pinned unit.                                      |             |
-| Units         | Bring branches, tickets, pull requests, and CI together as units of work.                                     | `unit.work` |
+| Tile          | What it shows                                                                   | Lists       |
+| ------------- | ------------------------------------------------------------------------------- | ----------- |
+| Activity      | See recent activity from the tools connected to this project.                   |             |
+| Count         | Count or list pull requests, branches, failed builds and work needing review.   |             |
+| Entity status | Show the status of a branch, pull request or CI run in a small tile.            |             |
+| Inspector     | Read linked tickets, pull requests, conversations, commits and CI in one place. |             |
+| Timer         | Track time on one task, then review, edit or copy today’s sessions.             |             |
+| Unit status   | See ticket, local work, review and CI status for the selected or pinned work.   |             |
+| Units         | See branches, tickets, pull requests and CI grouped by the work they belong to. | `unit.work` |
 
 ## Git & worktrees
 
-| Tile              | What it shows                                                              | Lists          |
-| ----------------- | -------------------------------------------------------------------------- | -------------- |
-| Branch details    | Inspect branch details for a selected or pinned unit.                      |                |
-| Branch overview   | See the state of one branch at a glance.                                   |                |
-| Branch status     | Keep the current branch and upstream state in view.                        |                |
-| Branches          | Browse branches and select the work to follow on this dashboard.           | `git.branch`   |
-| Commits           | See recent commits for the work you are following.                         |                |
-| Diff              | Inspect changed files for a selected or pinned unit of work.               |                |
-| Git status        | See the checked-out branch, last commit and upstream sync state.           |                |
-| Repositories      | Browse the repositories associated with this project.                      |                |
-| Staged changes    | Staged files as a tree; select to unstage, then commit from your checkout. |                |
-| Working tree      | Modified, untracked and conflicted files as a tree; select to stage.       |                |
-| Worktree details  | Inspect the worktree attached to a selected or pinned unit.                |                |
-| Worktree overview | See a worktree and its working state at a glance.                          |                |
-| Worktrees         | Browse project worktrees and select the work to follow.                    | `git.worktree` |
+| Tile              | What it shows                                                                  | Lists          |
+| ----------------- | ------------------------------------------------------------------------------ | -------------- |
+| Branch details    | Read details of the branch linked to the selected or pinned work.              |                |
+| Branch overview   | See a branch’s latest commit and position relative to upstream at a glance.    |                |
+| Branch status     | See the current branch and whether it is ahead of or behind upstream.          |                |
+| Branches          | Find a branch and choose which work the dashboard follows.                     | `git.branch`   |
+| Commits           | Read recent commits for the selected or pinned work.                           |                |
+| Diff              | Review file changes for the selected or pinned work.                           |                |
+| Git status        | See the current branch, its latest commit and how it compares with upstream.   |                |
+| Repositories      | See the repositories linked to this project.                                   |                |
+| Staged changes    | Review staged files, unstage selections and commit changes from your checkout. |                |
+| Working tree      | Review local file changes and select files to stage.                           |                |
+| Worktree details  | Read details of the worktree linked to the selected or pinned work.            |                |
+| Worktree overview | See a worktree’s path, branch, recent activity and disk usage at a glance.     |                |
+| Worktrees         | Find a worktree and choose which work the dashboard follows.                   | `git.worktree` |
 
 ## Reviews & tickets
 
-| Tile           | What it shows                                                                                           | Lists              |
-| -------------- | ------------------------------------------------------------------------------------------------------- | ------------------ |
-| Conversation   | Follow review comments and discussion on a pull request.                                                |                    |
-| Documents      | Files this project accumulates — dumps, spreadsheets, PDFs — grouped by kind or by what they belong to. | `document`         |
-| PR description | Read the description of the pull request you are following.                                             |                    |
-| PR overview    | See review state and key details for one pull request.                                                  |                    |
-| PRs            | Browse pull requests you own, review, or are involved in.                                               | `vcs.pull_request` |
-| Pull request   | Show the pull request attached to a selected or pinned unit.                                            |                    |
-| Slack          | Messages that mentioned you, ready to attach to a ticket or PR.                                         | `slack.message`    |
-| Ticket         | Show the ticket attached to a selected or pinned unit.                                                  |                    |
-| Tickets        | Keep an eye on tickets assigned to you or involving you.                                                | `ticket`           |
+| Tile           | What it shows                                                                   | Lists              |
+| -------------- | ------------------------------------------------------------------------------- | ------------------ |
+| Conversation   | Read review comments and discussion on a pull request.                          |                    |
+| Documents      | Browse project files, such as PDFs and spreadsheets, by type or related work.   | `document`         |
+| PR description | Read the full description of the selected or pinned pull request.               |                    |
+| PR overview    | Check the review status and key details of a pull request.                      |                    |
+| PRs            | Find pull requests you opened, review or are involved in.                       | `vcs.pull_request` |
+| Pull request   | Read the pull request linked to the selected or pinned work.                    |                    |
+| Slack          | Find Slack messages that mention you and link them to tickets or pull requests. | `slack.message`    |
+| Ticket         | Read the ticket linked to the selected or pinned work.                          |                    |
+| Tickets        | Find tickets assigned to you or linked to work you’re involved in.              | `ticket`           |
 
 ## Build & runtime
 
-| Tile                      | What it shows                                                                    |
-| ------------------------- | -------------------------------------------------------------------------------- |
-| Active CI                 | Commits with CI running or failed, with a progress bar.                          |
-| Code graph                | Explore routes, entry points, and the code they call.                            |
-| Console                   | An interactive terminal that keeps its shell and scrollback between page visits. |
-| Docker                    | See Docker containers and their current state.                                   |
-| Process                   | Keep a configured project command and its process state in view.                 |
-| Run output                | Read output from project task runs.                                              |
-| Sentry                    | Surface unresolved errors and recent issues from Sentry.                         |
-| Stack trace on call graph | Overlay a Sentry stack trace on indexed functions and their callers and callees. |
-| Tasks                     | Browse project tasks from manifests, recipes, and toolchains.                    |
+| Tile                      | What it shows                                                                       |
+| ------------------------- | ----------------------------------------------------------------------------------- |
+| Active CI                 | See commits with running or failed CI and follow build progress.                    |
+| Code graph                | Trace routes and entry points through the functions they call.                      |
+| Console                   | Run commands in a terminal that keeps its session and output when you change pages. |
+| Docker                    | See project Docker containers and whether they are running.                         |
+| Process                   | Run a configured project command and see whether its process is active.             |
+| Run output                | Read logs from project task runs.                                                   |
+| Sentry                    | See unresolved errors and recently active issues from Sentry.                       |
+| Stack trace on call graph | Place a Sentry stack trace in the code graph to see related functions.              |
+| Tasks                     | Find tasks defined by project manifests, recipes and toolchains.                    |
 
 ## Agents
 
-| Tile           | What it shows                                               |
-| -------------- | ----------------------------------------------------------- |
-| Agent          | Work with an agent using the context available in Salience. |
-| Agent sessions | Follow running agents and their latest session activity.    |
+| Tile           | What it shows                                                          |
+| -------------- | ---------------------------------------------------------------------- |
+| Agent          | Chat with an agent that can use the work context gathered by Salience. |
+| Agent sessions | See active agent sessions and what each agent has done recently.       |
 
 ## App & connections
 
 | Tile        | What it shows                                                         |
 | ----------- | --------------------------------------------------------------------- |
-| API limit   | Track remaining API capacity for a connected service.                 |
-| CPU         | A compact view of Salience’s CPU usage.                               |
-| Disk I/O    | Salience’s disk read and write rates, with compact sparklines.        |
-| Memory      | A compact view of Salience’s memory usage.                            |
-| Sync status | See when project sources last synced and whether they need attention. |
+| API limit   | See how many API requests remain for a connected service.             |
+| CPU         | See how much CPU Salience is using.                                   |
+| Disk I/O    | See Salience’s disk read and write activity over time.                |
+| Memory      | See how much memory Salience is using.                                |
+| Sync status | Check when each project source last synced and whether a sync failed. |
