@@ -1,20 +1,32 @@
 ---
 title: Timer
-description: Timebox work and review your local session history.
+description: A visual timebox that keeps the time you have left in view, and a local record of where your day went.
 ---
 
 # Timer
 
-The clock in the titlebar opens a timer from any page. Start it yourself when you begin a piece of work; Salience does not guess what you are doing from activity.
+Time boxing a spike, counting down how long until lunch or need a reminder because you're time blind? 
 
-## Start a timer
+![A running timer](/features/timer-2.png)
 
-Choose **For** to set a duration, **Until** to set a clock time, or **Open** to count elapsed time without a limit. You can give the session a description or link it to a ticket, pull request or unit. **Start timer** on a work row opens the timer with that item selected.
+## Timebox a piece of work
 
-Only one timer runs at a time. Starting another saves and ends the current session. A limited timer keeps running after zero and shows overtime in the titlebar and at the window edge; stop it when you finish. The elapsed time is based on saved timestamps, so it remains accurate if the app sleeps or closes.
+Start a timer from any page:
 
-## Review sessions
+- **For** a set length, 25 minutes or 2 hours.
+- **Until** a clock time, like half twelve for lunch or half five for home time.
+- **Open**, with no limit, to record how long something actually takes.
 
-Add a **Timer** tile to browse sessions by day. You can edit their start and end times, description, notes or linked work, split a session, or delete one. **Copy day as text** gives you a summary to paste elsewhere.
+Give it a description, or link it to the ticket, pull request or unit of work you're on.
 
-Sessions are stored locally as personal time data. They are not project entities and are not exposed through the MCP server. The timer does not submit time to Harvest or another billing service.
+## Watch it run down
+
+While a timer runs, a glow along the bottom of the window shows how much time is left. It's full when you start and shrinks towards one corner as time passes, turning amber as you near the end.
+
+Reaching zero doesn't stop the timer. The glow spreads across the whole bottom edge in red and the time you've gone over appears next to the clock.
+
+![A running timer](/features/timer-1.png)
+
+## Your time stays yours
+
+Timed sessions are kept in Salience's encrypted local database, not as entities, so they don't appear alongside project work and aren't available over the MCP server.

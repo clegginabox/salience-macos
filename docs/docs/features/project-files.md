@@ -1,26 +1,33 @@
 ---
-title: Project files and drag and drop
-description: Add project documents, link them to work and open them from Salience.
+title: Project files
+description: Keep a project's PDFs, spreadsheets and notes in Salience, linked to the tickets, pull requests and branches they belong to.
 ---
 
-# Project files and drag and drop
+# Project files
 
-A project can collect PDFs, spreadsheets, notes and other files that belong with its work. Salience lists them in a **Documents** tile and can link them to tickets, pull requests, branches and units of work.
+If your Downloads folder is anything like mine, it's full of logs, spreadsheets from Jira tickets detailing a piece of work, documentation as PDFs and the updated spec someone sent on Slack. Files that matter to your work but don't belong in source control. Salience keeps them with the project, associated with the entity they're about. You can find them by name in the app, and agents can see them and what they're linked to over the MCP server, like any other relationship.
 
 ## Add files
 
-1. Open a project in Salience.
-2. Drag one or more files into the window. Drop anywhere to add them to the project, or drop onto a supported work row to add and link them to that item.
-3. Read the titlebar caption while dragging to confirm the destination. It reports the result after the drop.
+Drag files into the Salience window while a project is open.
 
-You can also choose **Add document…** in the Documents tile. This adds files to the project without linking them to a work item. Drops outside a project do not add files, and folders are skipped rather than imported recursively.
+- **Drop anywhere** to add the files to the project.
+- **Drop onto a ticket, pull request, branch or unit of work** to add them and associate them with that entity.
 
-Files already inside the project's repository are referenced in place. Salience copies files from elsewhere into its own project document storage and leaves the originals alone. Adding the same file again does not create another document.
+![Adding a file to an entity](/features/docs.png)
 
-## Find and manage files
+## What happens to the original
 
-The Documents tile groups files by kind or by the work they are attached to. Search by filename, or open a file in its default app. The row menu also lets you reveal it in the file manager, attach or detach it from work, and remove it.
+- **A file inside the project's repository** stays where it is. Salience uses it in place and makes no copy.
+- **A file from anywhere else** is copied into Salience's storage for that project. The original isn't touched, so you can tidy Downloads afterwards.
 
-**Remove** asks for confirmation. It removes the document record and its links. For a copied file, Salience moves its copy to the OS trash. A file in your repository stays on disk.
+## Removing a file
+
+Removing a document deletes it and its links from Salience. What happens on disk depends on where it came from:
+
+- **A copy Salience made** goes to the Trash, so you can still restore it.
+- **A file in your repository** stays on disk. Salience only stops listing it.
+
+![Adding a file to an entity](/features/docs-3.png)
 
 [Learn about entities and their relationships →](/docs/concepts#entities)
