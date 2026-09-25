@@ -56,6 +56,16 @@ Pick from over [45 tiles](https://clegginabox.github.io/salience-macos/docs/refe
 - [Privacy and security](https://clegginabox.github.io/salience-macos/docs/privacy) — understand where your data lives and how to inspect connections.
 - [About Salience](https://clegginabox.github.io/salience-macos/docs/about)
 
+## Roadmap
+
+- Gitlab Connector
+- Linear Connector
+- Dedicated agent page with quick actions to resolve situations, a way to share curated context with an agent and more.
+- Graph Explorer
+- Javascript support for the code graph
+
+If you have any suggestions or things you'd like to see in Salience [open an issue](https://github.com/clegginabox/salience-macos/issues) or [join the Discord](https://discord.gg/NErgbMHJr).
+
 ## Help and feedback
 
 For a problem with the app, [open an issue](https://github.com/clegginabox/salience-macos/issues) with your platform, app version and steps to reproduce it. Remove credentials and private project information from logs and screenshots.
