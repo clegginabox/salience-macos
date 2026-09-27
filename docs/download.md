@@ -1,36 +1,21 @@
----
-# Update this block on each release — everything below reads from it.
-version: 0.2.0-alpha9
-released: 8 August 2026
-arm:
-  file: Salience_0.2.0-alpha9_aarch64.dmg
-  size: 32.8 MB
-  sha256: d86e3dc7e8961be8a7e9f97baf0fb31454d79220656414e51d9baa1312106655
-intel:
-  file: Salience_0.2.0-alpha9_x64.dmg
-  size: 36.2 MB
-  sha256: 8760777cc594cca1f5bed6106a28b6d902f69ea1536d23898ba17cc6cf95b961
----
+<script setup>
+import { data as release } from "./releases.data.js";
+</script>
 
 # Download Salience
 
 <p class="dl-status">
-  <strong>Pre-release.</strong> Salience is in alpha ({{ $frontmatter.version }}, released
-  {{ $frontmatter.released }}) and shipping early to a small group of users. Expect rough
+  <strong>Pre-release.</strong> Salience is in alpha ({{ release.version }}, released
+  {{ release.released }}) and shipping early to a small group of users. Expect rough
   edges, and please <a href="https://github.com/clegginabox/salience-macos/issues">report what you find</a>.
   It's free while it's in alpha; pricing comes later.
 </p>
 
 <div class="dl-grid">
-  <a class="dl-card" :href="`https://github.com/clegginabox/salience-macos/releases/download/v${$frontmatter.version}/${$frontmatter.arm.file}`">
-    <span class="dl-card-kicker">Apple Silicon</span>
-    <span class="dl-card-title">Download .dmg</span>
-    <span class="dl-card-meta">M1 and newer · {{ $frontmatter.arm.size }}</span>
-  </a>
-  <a class="dl-card" :href="`https://github.com/clegginabox/salience-macos/releases/download/v${$frontmatter.version}/${$frontmatter.intel.file}`">
-    <span class="dl-card-kicker">Intel</span>
-    <span class="dl-card-title">Download .dmg</span>
-    <span class="dl-card-meta">Intel Macs · {{ $frontmatter.intel.size }}</span>
+  <a v-for="download in release.downloads" :key="download.file" class="dl-card" :href="download.url">
+    <span class="dl-card-kicker">{{ download.label }}</span>
+    <span class="dl-card-title">Download {{ download.format }}</span>
+    <span class="dl-card-meta">{{ download.size }}</span>
   </a>
 </div>
 
@@ -87,33 +72,58 @@ intel:
 ### Which one do I need?
 
 Open the **Apple menu** in your menu bar and choose **About This Mac**. If the
-chip line says *Apple M1*, *M2*, *M3* or *M4*, take the Apple Silicon build. If
-it says *Intel*, take the Intel one.
+chip line says *Apple M…*, take the Apple Silicon build. If it says *Intel*,
+take the Intel one.
+
+On **Linux**, choose the `.deb` for Debian or Ubuntu, or the `.AppImage` for
+other distributions. Both Linux downloads are for x86_64 (AMD64) computers.
 
 ## Requirements
 
-- macOS 13 (Ventura) or newer
-- Apple Silicon or Intel
+- macOS 13 (Ventura) or newer, on Apple Silicon or Intel; or Linux on x86_64
 - A second monitor is recommended but not required — Salience is designed to be
   glanceable from across the room
 
 ## Installing
 
+### macOS
+
 Open the `.dmg`, drag Salience to your Applications folder, and launch it from
 Spotlight or Launchpad. The first time you open it, macOS will ask whether you
 trust the developer — click **Open**.
+
+### Linux
+
+For Debian or Ubuntu, install the downloaded `.deb` using your software
+installer, or run `sudo apt install ./Salience_*.deb` from the download folder.
+
+For an AppImage, make the downloaded file executable and launch it:
+
+```sh
+chmod +x Salience_*.AppImage
+./Salience_*.AppImage
+```
+
+Run these commands in the download folder with only the version you want to
+install present.
 
 The [install guide](/docs/install) covers first launch in more detail, and
 [first run](/docs/getting-started) walks through adding your first project.
 
 ## Verifying your download
 
-<pre class="vp-code"><code>shasum -a 256 ~/Downloads/{{ $frontmatter.arm.file }}</code></pre>
+On macOS, run `shasum -a 256 <downloaded-file>`. On Linux, run
+`sha256sum <downloaded-file>`. Compare the result with the matching SHA-256 below.
 
-| Build | SHA-256 |
-|-------|---------|
-| Apple Silicon | `{{ $frontmatter.arm.sha256 }}` |
-| Intel | `{{ $frontmatter.intel.sha256 }}` |
+<table>
+  <thead><tr><th>Download</th><th>SHA-256</th></tr></thead>
+  <tbody>
+    <tr v-for="download in release.downloads" :key="download.file">
+      <td>{{ download.file }}</td>
+      <td><code v-if="download.sha256">{{ download.sha256 }}</code><span v-else>Not provided by GitHub</span></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Updating
 

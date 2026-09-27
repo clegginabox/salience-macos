@@ -9,6 +9,12 @@ on:
       - 'package-lock.json'
       - '.github/workflows/deploy.yml'
   workflow_dispatch:
+  release:
+    types: [published, edited]
+  # Also catches late asset uploads and releases created using GITHUB_TOKEN,
+  # which do not trigger another workflow automatically.
+  schedule:
+    - cron: '17 6 * * *'
 
 permissions:
   contents: read
@@ -20,10 +26,26 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  refresh-on-release:
+    if: github.event_name == 'release'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      # Pages only permits deployments from main. Release events use a tag ref,
+      # so dispatch a main-branch run instead of deploying from this event.
+      - run: gh workflow run deploy.yml --ref main
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+
   build:
+    if: github.event_name != 'release'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/setup-node@v4
         with:
@@ -32,7 +54,11 @@ jobs:
 
       - run: npm ci
 
+      - run: npm test
+
       - run: npm run docs:build
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
 
       - uses: actions/upload-pages-artifact@v3
         with:
