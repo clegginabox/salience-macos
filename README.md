@@ -59,6 +59,7 @@ Pick from over [45 tiles](https://clegginabox.github.io/salience-macos/docs/refe
 ## Roadmap
 
 - Gitlab Connector
+- Proxmox Connector
 - Linear Connector
 - Dedicated agent page with quick actions to resolve situations, a way to share curated context with an agent and more.
 - Graph Explorer
