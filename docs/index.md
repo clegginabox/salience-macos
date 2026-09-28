@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Salience
-description: Home Assistant for developer tools. A macOS and Linux app that brings branches, tickets, pull requests, builds and your local environment into one workspace.
+description: A macOS and Linux app that connects your branches, tickets, pull requests, builds and local environment, so you don't have to connect the dots in your head.
 sidebar: false
 aside: false
 prev: false
@@ -10,7 +10,9 @@ next: false
 
 # Salience
 
-**Home Assistant for developer tools.**
+**Your tools leave you to connect the dots in your head. Salience connects them for you.**
+
+Your IDE knows where you are in the code. Salience knows where you are in the work — and so can your AI agents.
 
 Salience is a macOS and Linux app that brings together your branches, tickets, pull requests, builds and local environment. It connects related work and lets you arrange it into pages of tiles.
 

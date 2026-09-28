@@ -1,7 +1,7 @@
 ## About Salience
 
-Salience is Home Assistant for your dev tools — an ambient pane that lives on
-your second monitor, calm until something needs your attention.
+Salience is an ambient pane for your dev tools. It lives on your second
+monitor, calm until something needs your attention.
 
 It was inspired by two things: a recent contract where I essentially worked as
 a one-man scrum team, and Home Assistant.

@@ -1,6 +1,8 @@
 # Salience
 
-**Home Assistant for developer tools.**
+**Your tools leave you to connect the dots in your head. Salience connects them for you.**
+
+Your IDE knows where you are in the code. Salience knows where you are in the work — and so can your AI agents.
 
 Salience is a macOS and Linux app that watches your branches, tickets, pull requests, builds, observability and local environment, and works out how they fit together: the ticket behind a branch, the PR it became, the image that PR built and where that image is running. That's how it catches what no single tool can see: a merged PR whose ticket is still open, branches and worktrees you no longer need, the commits that went out in the last deploy.
 
