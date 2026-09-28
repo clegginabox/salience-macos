@@ -24,9 +24,15 @@ Create your own dashboards, keep it on a second screen for a quiet overview, dig
 
 ![Salience on macOS showing the Docker setup unit, its pull request, passing checks and related activity](docs/public/readme.png)
 
-The Docker setup ticket, its branch, pull request and build checks, brought together in Salience.
+The Docker setup ticket, its branch, pull request and build checks, brought together in Salience. 
 
-[Follow the example](https://clegginabox.github.io/salience-macos/docs/concepts) · [More screenshots](https://clegginabox.github.io/salience-macos/gallery)
+[Follow the example](https://clegginabox.github.io/salience-macos/docs/concepts)
+
+![Branch -> Pull request -> CI -> Checks on self hosted runners -> the infrastructure they run on](docs/public/proxmox.png)
+
+Branch -> Pull request -> CI -> Checks on self hosted runners -> the infrastructure they run on
+
+ · [More screenshots](https://clegginabox.github.io/salience-macos/gallery)
 
 ## Connectors
 
