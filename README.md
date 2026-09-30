@@ -81,37 +81,6 @@ For a problem with the app, [open an issue](https://github.com/clegginabox/salie
 
 For questions and discussion, [join the Discord](https://discord.gg/NErgbMHJr).
 
-## This repository
-
-This repository contains Salience's documentation website and release distribution.
-
-Documentation changes can be submitted as pull requests here.
-
-### Building the docs
-
-Use Node.js 20 or newer, run `npm ci`, then `npm run docs:dev` for a local
-preview or `npm run docs:build` for a production build. Run `npm test` to check
-release selection and download metadata handling.
-
-The download page fetches GitHub release metadata at build time using
-`docs/releases.data.js`. It selects the most recently published non-draft
-release, including prereleases, and displays its supported macOS and Linux
-installers. Filenames, sizes, links and SHA-256 hashes come from GitHub; missing
-hashes are explicitly marked as unavailable. Updater archives and signatures
-are excluded. A failed API request or a release without supported installers
-fails the build, leaving the previously deployed site in place.
-
-Building requires network access to GitHub. Set `GITHUB_TOKEN` locally if you
-need authenticated API rate limits; the Pages workflow supplies its own token.
-The token is used only by the build and is never included in the site data.
-
-Pages rebuilds on documentation pushes, release publication or edits, and daily
-to catch late asset uploads and releases created by another workflow's
-`GITHUB_TOKEN`. For an immediate refresh after uploading assets, run
-**Deploy docs to Pages** from the Actions tab using **Run workflow**, or dispatch
-`deploy.yml` from the release pipeline after all uploads finish. No generated
-release metadata needs to be committed.
-
 <a href="https://www.star-history.com/?repos=clegginabox%2Fsalience-macos&type=date&legend=top-left">
  <picture>
    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=clegginabox/salience-macos&type=date&theme=dark&legend=top-left" />
